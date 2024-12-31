@@ -1,26 +1,28 @@
 
 /vendor/
-#sites/*/settings*.php
-#sites/*/services*.yml
+sites/*/settings*.php
+sites/*/services*.yml
 #sites/*/files
 #sites/*/private
+sites/default/files/php/ 
 
 # Ignore multi-site test environment.
 sites/simpletest
 
 # Ignore configuration files that may contain sensitive information.
-# */settings*.php
+ */settings*.php
 
 # Ignore paths that contain user-generated content.
 # */files
 # */private
 
 core
-#libraries
+libraries
+themes/contrib
 modules/contrib
 docker/etc
 src/tmp
-#nc_assets
+nc_assets
 **/.DS_Store
 
 node_modules
@@ -30,3 +32,9 @@ node_modules
 config/sync/config_split.config_split.local.yml
 config/envs/local/
 *.http
+.csslintrc
+.editorconfig
+.gitattributes
+.htaccess
+README.md
+error_log
