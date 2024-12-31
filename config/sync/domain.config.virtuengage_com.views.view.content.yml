@@ -479,14 +479,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: domain_access_filter
           operator: in
           value:
             virtuengage_com: virtuengage_com
-          group: 1
+          group: '1'
           exposed: false
           expose:
-            operator_id: ''
+            operator_id: false
             label: ''
             description: ''
             use_operator: false
@@ -508,10 +507,11 @@ display:
             optional: true
             widget: select
             multiple: false
-            remember: false
+            remember: 0
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+          plugin_id: domain_access_filter
       filter_groups:
         operator: AND
         groups:

@@ -24,3 +24,4 @@ content:
     region: content
 hidden:
   field_domain: true
+  field_domain_access: true

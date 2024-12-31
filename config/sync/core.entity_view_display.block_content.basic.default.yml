@@ -5,7 +5,7 @@ dependencies:
   config:
     - block_content.type.basic
     - field.field.block_content.basic.body
-    - field.field.block_content.basic.field_domain
+    - field.field.block_content.basic.field_domain_access
   module:
     - text
 _core:
@@ -23,4 +23,4 @@ content:
     weight: 0
     region: content
 hidden:
-  field_domain: true
+  field_domain_access: true

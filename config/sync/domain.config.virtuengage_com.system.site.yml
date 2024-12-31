@@ -3,12 +3,12 @@ _core:
 langcode: en
 uuid: 2111b669-5fe7-4f1a-9f50-6304d587ccf3
 name: 'Virtu Engage'
-mail: contact@vituengage.com
+mail: contact@virtuengage.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1
+  front: /node/3
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
