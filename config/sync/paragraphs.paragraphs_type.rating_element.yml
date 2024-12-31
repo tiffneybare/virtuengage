@@ -1,0 +1,10 @@
+uuid: e9a648eb-839e-4f64-8130-4f312075124e
+langcode: en
+status: true
+dependencies: {  }
+id: rating_element
+label: 'Rating Element'
+icon_uuid: null
+icon_default: null
+description: 'This element is for displaying ratings.'
+behavior_plugins: {  }

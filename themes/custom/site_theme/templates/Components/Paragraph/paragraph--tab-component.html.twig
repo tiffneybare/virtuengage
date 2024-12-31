@@ -1,0 +1,52 @@
+<div class="container {{tab_elements.background_color}}">
+  <!-- Tabs navs -->
+  <ul class="nav nav-tabs nav-fill border-0 mx-3" id="{{tab_elements.tab_section_id}}" role="tablist">
+    {% for key, tab_details in tab_elements.tab_items %}
+      {% if key == 0 %}
+        {% set first = 'active' %}
+        {% else %}
+        {% set first = '' %}
+      {% endif %}
+      {% if tab_details..tab_label %}
+        <li class="nav-item my-4 " role="presentation">
+          <button class="nav-link {{first}} rounded-0 tab-button" id="{{tab_details.tab_id}}" data-bs-toggle="tab" data-bs-target="#{{tab_details.tab_id}}-pane" type="button" role="tab" aria-controls="{{tab_details.tab_id}}-pane" aria-selected="true">{{tab_details.tab_label}}</button>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <!-- Tabs navs -->
+    <div class="tab-content" id="{{tab_elements.tab_section_id}}Content">
+  {% for key, tab_item in tab_elements.tab_items%}
+      {% if key == '0' %}
+        {% set first = 'show active' %}
+      {% else %}
+        {% set first = '' %}
+      {% endif %}
+      <div class="tab-pane fade {{first}}" id="{{tab_item.tab_id}}-pane" role="tabpanel" aria-labelledby="{{tab_item.tab_id}}" tabindex="0">
+        {% for key, content_section in tab_item.tab_content %}
+        <div class="tab-item">
+          <!-- Tabs content -->
+              {% if key =='column_element' %}
+                  <!-- Column Items -->
+                  {% set column_items = {'column_items': content_section}%}
+                  {% include 'paragraph--column-component.html.twig' with {'column_component': column_items} %}
+                  {{content}}
+              {% endif %}
+              {% if key == 'block_content' %}
+                {% set media_gallery_component = {'media_gallery_component': content_section.media_gallery_component} %}
+                {% set section_content = {'section_content': media_gallery_component} %}
+                {% include 'paragraph--block-component.html.twig' with {'block_content': section_content} %}
+                {{content}}
+              {% endif %}
+              {% if content_section.field_media_items %}
+                 <!-- Media Gallery -->
+                {% set media_gallery = content_section.field_media_items%}
+                {% include 'paragraph--media-gallery-component.html.twig' with {'label': content_section.field_label, 'media_gallery': media_gallery} %}
+                {{content}}
+              {% endif %}
+          <!-- Tabs content -->
+        </div>
+        {% endfor %}
+      </div>
+  {% endfor %}
+    </div>

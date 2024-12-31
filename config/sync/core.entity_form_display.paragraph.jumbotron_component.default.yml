@@ -1,0 +1,74 @@
+uuid: 7bdb3ad9-668b-4746-8822-0ae0d2e7fcb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.jumbotron_component.field_include_mobile_view
+    - field.field.paragraph.jumbotron_component.field_media_item
+    - field.field.paragraph.jumbotron_component.field_text_overlay
+    - paragraphs.paragraphs_type.jumbotron_component
+  module:
+    - conditional_fields
+    - paragraphs
+    - text
+id: paragraph.jumbotron_component.default
+targetEntityType: paragraph
+bundle: jumbotron_component
+mode: default
+content:
+  field_include_mobile_view:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_media_item:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: 'Media Item'
+      title_plural: 'Media Items'
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: media_element
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: '0'
+    third_party_settings:
+      conditional_fields:
+        c1cda752-bb93-4e75-92fc-b847df86bbca:
+          entity_type: paragraph
+          bundle: column_element
+          dependee: field_include_media_item
+          settings:
+            state: visible
+            reset: true
+            condition: checked
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              value: false
+            effect: show
+            effect_options: {  }
+            selector: ''
+  field_text_overlay:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: 'Enter Text'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

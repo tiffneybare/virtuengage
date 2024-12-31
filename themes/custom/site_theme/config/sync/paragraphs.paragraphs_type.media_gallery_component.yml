@@ -1,0 +1,10 @@
+uuid: 781cf49c-a7d0-4c4b-8f00-259b840a595e
+langcode: en
+status: true
+dependencies: {  }
+id: media_gallery_component
+label: 'Media Gallery Component'
+icon_uuid: null
+icon_default: null
+description: 'This component allows you to create a media gallery.'
+behavior_plugins: {  }

@@ -1,0 +1,26 @@
+uuid: 533df9d6-1dc3-449e-88f0-82b8e65d5a5b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_block
+    - field.storage.block_content.field_domain_access
+id: block_content.content_block.field_domain_access
+field_name: field_domain_access
+entity_type: block_content
+bundle: content_block
+label: 'Domain Access'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'domain:domain'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+    sort:
+      field: weight
+      direction: ASC
+field_type: entity_reference

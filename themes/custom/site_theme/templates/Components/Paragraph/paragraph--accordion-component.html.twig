@@ -1,0 +1,25 @@
+
+<div class="container">
+  <div class="accordion accordion-flush">
+    {% for key, accordion_item in accordion_items %}
+      {% if accordion_style == 'numbered' %}
+        {% set count = "%02d"|format(key+1)  %}
+        {% set numbered = "<span class='accordion-numbered is-thin '>" ~count~ "</span>" %}
+      {% else%}
+        {% set numbered = "" %}
+      {% endif %}
+      <div class="accordion-item ">
+        <h2 class="accordion-header " id="flush-heading{{key}}">
+        <button class="accordion-button text-center black-bg ps-0  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{key}}" aria-expanded="false" aria-controls="flush-collapse{{key}}">
+         {{ numbered| raw }} <span class="text-center p-2 position-relative top-0 start-50 translate-middle-x text-uppercase accordion-label">{{accordion_item.accordion_row_element.label}}</span>
+        </button>
+        </h2>
+        <div id="flush-collapse{{key}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{key}}" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">
+            {{accordion_item.accordion_row_element.content|raw}}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+</div>

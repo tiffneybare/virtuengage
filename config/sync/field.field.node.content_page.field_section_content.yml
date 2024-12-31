@@ -1,0 +1,85 @@
+uuid: 8b68b856-8357-4e74-b96e-5f78eda0f463
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section_content
+    - node.type.content_page
+    - paragraphs.paragraphs_type.section_content
+  module:
+    - entity_reference_revisions
+id: node.content_page.field_section_content
+field_name: field_section_content
+entity_type: node
+bundle: content_page
+label: 'Section Content'
+description: 'Select the type of content you want to add'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      section_content: section_content
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: -38
+        enabled: false
+      accordion_row_element:
+        weight: -32
+        enabled: false
+      column_component:
+        weight: -22
+        enabled: false
+      column_element:
+        weight: -31
+        enabled: false
+      heading_component:
+        weight: -39
+        enabled: false
+      hero_banner_component:
+        weight: -34
+        enabled: false
+      integer_element:
+        weight: -30
+        enabled: false
+      logo_element:
+        weight: -29
+        enabled: false
+      logo_list_component:
+        weight: -35
+        enabled: false
+      media_element:
+        weight: -28
+        enabled: false
+      media_gallery_component:
+        weight: -33
+        enabled: false
+      rating_element:
+        weight: -27
+        enabled: false
+      review_element:
+        weight: -26
+        enabled: false
+      section_content:
+        weight: -21
+        enabled: true
+      stat_element:
+        weight: -25
+        enabled: false
+      stats_component:
+        weight: -36
+        enabled: false
+      tab_component:
+        weight: -37
+        enabled: false
+      tab_element:
+        weight: -24
+        enabled: false
+      title_element:
+        weight: -23
+        enabled: false
+field_type: entity_reference_revisions

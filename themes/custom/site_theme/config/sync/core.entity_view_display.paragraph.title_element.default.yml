@@ -1,0 +1,39 @@
+uuid: 8cb139c1-028c-4e05-846d-b12f4bfa78a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_element.field_color
+    - field.field.paragraph.title_element.field_font_size
+    - field.field.paragraph.title_element.field_label
+    - paragraphs.paragraphs_type.title_element
+  module:
+    - options
+id: paragraph.title_element.default
+targetEntityType: paragraph
+bundle: title_element
+mode: default
+content:
+  field_color:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_font_size:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_label:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

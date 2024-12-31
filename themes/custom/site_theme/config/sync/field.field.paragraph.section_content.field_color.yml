@@ -1,0 +1,21 @@
+uuid: 65844c38-98d6-4a05-bb6a-55c3ce0dfac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.section_content
+  module:
+    - options
+id: paragraph.section_content.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: section_content
+label: 'Section Color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

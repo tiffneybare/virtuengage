@@ -1,0 +1,10 @@
+uuid: 5bc109de-e436-4613-9dd9-0be1aa9a34eb
+langcode: en
+status: true
+dependencies: {  }
+id: column_component
+label: 'Column Component'
+icon_uuid: null
+icon_default: null
+description: "<p>This component is used for creating column areas that can include the following:<br/>\r\n <ul>\r\n<li> Text</li>\r\n<li> Background Images</li>\r\n<li> 1 Media item</li>\r\n</ul><p>"
+behavior_plugins: {  }

@@ -1,0 +1,10 @@
+uuid: 76297b84-0d2b-40c4-8c0f-ba66af017b5b
+langcode: en
+status: true
+dependencies: {  }
+id: tab_element
+label: 'Tab Element'
+icon_uuid: null
+icon_default: null
+description: "<p>This element is used to create content in tabs using the following component options</br>\r\n<ul>\r\n<li>Accordion Component</li>\r\n<li>Content Component</li>\r\n<li>Heading Component</li>\r\n<li>Hero Banner Component</li>\r\n<li>Logo List Component</li>\r\n<li>Media Gallery Component</li>\r\n<li>Stats Component</li>\r\n</ul>\r\n</p>"
+behavior_plugins: {  }

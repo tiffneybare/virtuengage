@@ -1,0 +1,10 @@
+uuid: 86a20662-80b0-4ff3-8365-8044e8f2b3e9
+langcode: en
+status: true
+dependencies: {  }
+id: jumbotron_component
+label: 'Jumbotron Component'
+icon_uuid: null
+icon_default: null
+description: 'This something that is general displayed at the top of the page.'
+behavior_plugins: {  }

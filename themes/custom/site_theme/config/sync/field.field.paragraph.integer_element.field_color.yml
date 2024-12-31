@@ -1,0 +1,23 @@
+uuid: 643c2177-00c5-4cb0-9f83-ae5aed02facd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.integer_element
+  module:
+    - options
+id: paragraph.integer_element.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: integer_element
+label: Color
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: black
+default_value_callback: ''
+settings: {  }
+field_type: list_string

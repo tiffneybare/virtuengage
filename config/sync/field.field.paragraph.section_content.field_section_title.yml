@@ -1,0 +1,19 @@
+uuid: 23a5cd24-eca5-404b-b007-00edf6c064a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.section_content
+id: paragraph.section_content.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: section_content
+label: 'Section Title (Internal use only)'
+description: 'This title is only used to help label the section so you can find it easier when you have a lot of sections on the page.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

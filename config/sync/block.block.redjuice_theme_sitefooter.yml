@@ -1,0 +1,33 @@
+uuid: 1532a0e3-46b0-420e-9aa0-d69576a58227
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:content_block:4c28c39d-1bc6-492e-a634-d6116b2e2477'
+  module:
+    - block_content
+    - domain
+  theme:
+    - redjuice_theme
+id: redjuice_theme_sitefooter
+theme: redjuice_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:4c28c39d-1bc6-492e-a634-d6116b2e2477'
+settings:
+  id: 'block_content:4c28c39d-1bc6-492e-a634-d6116b2e2477'
+  label: 'Site footer'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  domain:
+    id: domain
+    negate: false
+    context_mapping:
+      domain: '@domain.current_domain_context:domain'
+    domains:
+      redjuice_agency: redjuice_agency

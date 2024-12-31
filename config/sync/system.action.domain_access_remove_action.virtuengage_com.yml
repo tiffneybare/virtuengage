@@ -1,0 +1,14 @@
+uuid: 026da477-c74d-4915-9922-e422f08dc287
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.virtuengage_com
+  module:
+    - domain_access
+id: domain_access_remove_action.virtuengage_com
+label: 'Remove selected content from the Virtu Engage domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: virtuengage_com

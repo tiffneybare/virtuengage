@@ -1,0 +1,10 @@
+uuid: 42ca62a4-c98f-48d6-bac7-461e1970d440
+langcode: en
+status: true
+dependencies: {  }
+id: stat_element
+label: 'Stat Element'
+icon_uuid: null
+icon_default: null
+description: 'This element is used for creating stats'
+behavior_plugins: {  }

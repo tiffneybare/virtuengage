@@ -1,0 +1,10 @@
+uuid: 46552f7b-6fe3-435a-abf8-773ac0f10ea6
+langcode: en
+status: true
+dependencies: {  }
+id: logo_gallery
+label: 'Logo Gallery'
+icon_uuid: null
+icon_default: null
+description: 'Select a list of logos to display in gallery style'
+behavior_plugins: {  }

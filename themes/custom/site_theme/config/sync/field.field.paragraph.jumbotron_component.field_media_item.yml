@@ -1,0 +1,85 @@
+uuid: 13817cf1-12a9-40aa-865b-c74e06defa57
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_item
+    - paragraphs.paragraphs_type.jumbotron_component
+    - paragraphs.paragraphs_type.media_element
+  module:
+    - entity_reference_revisions
+id: paragraph.jumbotron_component.field_media_item
+field_name: field_media_item
+entity_type: paragraph
+bundle: jumbotron_component
+label: 'Media Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      media_element: media_element
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: 20
+        enabled: false
+      accordion_row_element:
+        weight: 21
+        enabled: false
+      column_component:
+        weight: 22
+        enabled: false
+      column_element:
+        weight: 19
+        enabled: false
+      heading_component:
+        weight: 17
+        enabled: false
+      hero_banner_component:
+        weight: 9
+        enabled: false
+      integer_element:
+        weight: 22
+        enabled: false
+      jumbotron_component:
+        weight: 27
+        enabled: false
+      logo_element:
+        weight: 23
+        enabled: false
+      logo_list_component:
+        weight: 20
+        enabled: false
+      media_element:
+        weight: 26
+        enabled: true
+      media_gallery_component:
+        weight: 22
+        enabled: false
+      rating_element:
+        weight: 29
+        enabled: false
+      section_content:
+        weight: 33
+        enabled: false
+      stat_element:
+        weight: 35
+        enabled: false
+      stats_component:
+        weight: 25
+        enabled: false
+      tab_component:
+        weight: 36
+        enabled: false
+      tab_element:
+        weight: 37
+        enabled: false
+      title_element:
+        weight: 26
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+uuid: 29f64ce5-ba25-4943-9e5c-7e3b628c6496
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.redjuice_agency
+  module:
+    - domain_access
+id: domain_access_remove_action.redjuice_agency
+label: 'Remove selected content from the Red Juice domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: redjuice_agency

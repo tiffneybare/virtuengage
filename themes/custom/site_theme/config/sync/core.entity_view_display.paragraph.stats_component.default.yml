@@ -1,0 +1,24 @@
+uuid: a0d66f1e-9261-463f-b09c-cfd33306b4b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stats_component.field_stats
+    - paragraphs.paragraphs_type.stats_component
+  module:
+    - entity_reference_revisions
+id: paragraph.stats_component.default
+targetEntityType: paragraph
+bundle: stats_component
+mode: default
+content:
+  field_stats:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

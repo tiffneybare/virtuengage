@@ -1,0 +1,26 @@
+uuid: 6e51e5c1-a4b1-4b96-b557-bfda79077a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - field.storage.block_content.field_domain
+id: block_content.basic.field_domain
+field_name: field_domain
+entity_type: block_content
+bundle: basic
+label: Domain
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'domain:domain'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+    sort:
+      field: weight
+      direction: ASC
+field_type: entity_reference

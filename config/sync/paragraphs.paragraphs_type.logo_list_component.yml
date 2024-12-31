@@ -1,0 +1,10 @@
+uuid: 876295c9-3094-438d-9ad4-0ac86dbc57c7
+langcode: en
+status: true
+dependencies: {  }
+id: logo_list_component
+label: 'Logo List Component'
+icon_uuid: null
+icon_default: null
+description: 'This component allows you to display a list of logos'
+behavior_plugins: {  }

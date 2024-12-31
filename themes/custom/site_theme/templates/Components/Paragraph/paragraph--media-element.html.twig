@@ -1,0 +1,10 @@
+{% if main_media.details.bundle == 'image' %}
+   <div class="p-2 mx-auto d-block">
+      <div>
+        <img src="{{main_media.details.uri}}" class="card-img-top img-fluid {{ main_media.format}}" alt="{{main_media.details.alt}}">
+      </div>
+    </div>
+  {% elseif main_media.details.bundle == 'video' or main_media.details.bundle == 'remote_video' %}
+      <video controls  class="embed-responsive-item {{ main_media.format}}" src="{{main_media.details.uri}}?feature=oembed"allowfullscreen></video>
+{% endif %}
+

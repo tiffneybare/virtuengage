@@ -1,0 +1,10 @@
+uuid: 05cd95a3-2d06-4f5e-b60a-6ce5891ed0cc
+langcode: en
+status: true
+dependencies: {  }
+id: accordion_row_element
+label: 'Accordion Row Element'
+icon_uuid: null
+icon_default: null
+description: "<p>This element creates an accordion row with the following options:</br>\r\n<ul>\r\n<li>Title</li>\r\n<li>Content</li>\r\n</ul>\r\n</p>"
+behavior_plugins: {  }

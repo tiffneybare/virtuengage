@@ -1,0 +1,27 @@
+uuid: 87741ef4-6121-4873-b66e-32c6907c416a
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_accordion_style
+field_name: field_accordion_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: numbered
+      label: Numbered
+    -
+      value: normal
+      label: Normal
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

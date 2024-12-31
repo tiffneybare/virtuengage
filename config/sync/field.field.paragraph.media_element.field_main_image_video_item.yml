@@ -1,0 +1,33 @@
+uuid: c13b42e7-cad3-4bcf-9a0a-2c39cd1c92b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_main_image_video_item
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - paragraphs.paragraphs_type.media_element
+id: paragraph.media_element.field_main_image_video_item
+field_name: field_main_image_video_item
+entity_type: paragraph
+bundle: media_element
+label: Media
+description: 'The video or image selected here will display in mobile views.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+      video: video
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

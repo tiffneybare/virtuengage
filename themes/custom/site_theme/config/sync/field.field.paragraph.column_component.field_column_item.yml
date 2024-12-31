@@ -1,0 +1,91 @@
+uuid: d3e4178c-0dfe-4d36-94d6-f536e36a3ff7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_item
+    - paragraphs.paragraphs_type.column_component
+    - paragraphs.paragraphs_type.column_element
+  module:
+    - entity_reference_revisions
+id: paragraph.column_component.field_column_item
+field_name: field_column_item
+entity_type: paragraph
+bundle: column_component
+label: 'Column Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      column_element: column_element
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: -39
+        enabled: false
+      accordion_row_element:
+        weight: -37
+        enabled: false
+      column_component:
+        weight: -36
+        enabled: false
+      column_element:
+        weight: -41
+        enabled: true
+      heading_component:
+        weight: -42
+        enabled: false
+      hero_banner_component:
+        weight: -43
+        enabled: false
+      integer_element:
+        weight: -33
+        enabled: false
+      jumbotron_component:
+        weight: -30
+        enabled: false
+      logo_element:
+        weight: -31
+        enabled: false
+      logo_gallery:
+        weight: -29
+        enabled: false
+      logo_list_component:
+        weight: -38
+        enabled: false
+      media_component:
+        weight: -28
+        enabled: false
+      media_element:
+        weight: -40
+        enabled: false
+      media_gallery_component:
+        weight: -35
+        enabled: false
+      rating_element:
+        weight: -27
+        enabled: false
+      section_content:
+        weight: -24
+        enabled: false
+      stat_element:
+        weight: -26
+        enabled: false
+      stats_component:
+        weight: -34
+        enabled: false
+      tab_component:
+        weight: -25
+        enabled: false
+      tab_element:
+        weight: -23
+        enabled: false
+      title_element:
+        weight: -32
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: 12adc8eb-723e-4531-90bd-324078ffe14e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_column_order
+    - paragraphs.paragraphs_type.column_element
+  module:
+    - options
+id: paragraph.column_element.field_column_order
+field_name: field_column_order
+entity_type: paragraph
+bundle: column_element
+label: 'Column Order for Mobile'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

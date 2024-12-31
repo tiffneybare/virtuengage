@@ -1,0 +1,14 @@
+uuid: 1ef0263b-95fa-4b2b-bbec-abbcb7098b9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.redjuice_agency
+  module:
+    - domain_access
+id: domain_access_add_action.redjuice_agency
+label: 'Add selected content to the Red Juice domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: redjuice_agency

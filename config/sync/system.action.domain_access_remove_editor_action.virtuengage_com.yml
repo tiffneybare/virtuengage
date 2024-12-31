@@ -1,0 +1,14 @@
+uuid: eb027816-6cdd-4650-8d3d-b18ff7543ced
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.virtuengage_com
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.virtuengage_com
+label: 'Remove editors from the Virtu Engage domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: virtuengage_com

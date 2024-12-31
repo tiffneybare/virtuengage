@@ -1,0 +1,28 @@
+uuid: 34b7796f-1d8b-4a01-b964-6cd577a882e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.coming_soon.field_domain_access
+    - field.field.node.coming_soon.field_domain_all_affiliates
+    - field.field.node.coming_soon.field_domain_source
+    - field.field.node.coming_soon.field_hero_banner
+    - node.type.coming_soon
+  module:
+    - user
+id: node.coming_soon.teaser
+targetEntityType: node
+bundle: coming_soon
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_domain_source: true
+  field_hero_banner: true

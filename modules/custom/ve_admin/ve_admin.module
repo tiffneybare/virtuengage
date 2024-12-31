@@ -1,0 +1,57 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Customize the webform.
+ *
+ * Implements hook_form_alter().
+ */
+function ve_admin_form_alter(array &$form, FormStateInterface $form_state, $form_id): void {
+
+  if ($form_id == 'node_landing_page_form' || $form_id == 'node_landing_page_edit_form'){
+    $form['#attached']['library'][] = 've_admin/ve_admin.lib';
+
+  }
+  foreach ($form as $key => $value) {
+    if (strpos($key, 'field') === 0) {
+     $widgetSubform = $form[$key]["widget"][0]["subform"];
+     if (is_array ($widgetSubform) && array_key_exists('field_media_item', $widgetSubform)) {
+      $includeMobileMediaSubmform =  $widgetSubform["field_media_item"]["widget"][0]["subform"];
+      if (array_key_exists('field_include_mobile_view', $includeMobileMediaSubmform)) {
+        $includeMobileMediaCheckbox = $includeMobileMediaSubmform["field_include_mobile_view"]["widget"];
+      /* $form[$key]["widget"][0]["subform"]["field_media_item"]["widget"][0]["subform"]["field_include_mobile_view"]["widget"]["value"]['#ajax'] = [
+          'callback' => 'showHideCallback',
+          'wrapper' => 'field-media-item-checkbox',
+          'event' => 'click',
+          'effect' => 'fade',
+          ];
+ $includeMobileMediaCheckboxValue = $includeMobileMediaSubmform["field_include_mobile_view"]["widget"]["value"]["#default_value"];
+        $form["field_hero_banner"]["widget"][0]["subform"]["field_media_item"]["widget"][0]["subform"]["field_mobile_image_video_item"]["#access"] =  $includeMobileMediaCheckboxValue;*/
+      }
+     }
+    }
+  }
+}
+
+ /**
+  * Show or hide items callback.
+  */
+function showHideCallback(array &$form, FormStateInterface $form_state) {
+  $triggerEvent = $form_state->getTriggeringElement()['#op'];
+  if ($triggerEvent == null) {
+    foreach ($form as $key => $value) {
+    if (strpos($key, 'field') === 0) {
+     $widgetSubform = $form[$key]["widget"][0]["subform"];
+     if (is_array ($widgetSubform) && array_key_exists('field_media_item', $widgetSubform)) {
+      $includeMobileMediaSubmform =  $widgetSubform["field_media_item"]["widget"][0]["subform"];
+      if (array_key_exists('field_include_mobile_view', $includeMobileMediaSubmform)) {
+        $includeMobileMediaCheckboxValue = $includeMobileMediaSubmform["field_include_mobile_view"]["widget"]["value"]["#default_value"];
+        $form["field_hero_banner"]["widget"][0]["subform"]["field_media_item"]["widget"][0]["subform"]["field_mobile_image_video_item"]["#access"] =  $includeMobileMediaCheckboxValue;
+      }
+     }
+      $form_state->setRebuild();
+    }
+  }
+  }
+  }

@@ -1,0 +1,10 @@
+uuid: 779a15ee-cd6b-442b-8bec-cf2ea5746f2a
+langcode: en
+status: true
+dependencies: {  }
+id: integer_element
+label: 'Integer Element'
+icon_uuid: null
+icon_default: null
+description: "<p>This element allows you to enter integers with the following options:</br>\r\n<ul>\r\n<li>Label</li>\r\n<li>Size</li>\r\n<li>Color</li>\r\n</ul>\r\n</p>\r\n"
+behavior_plugins: {  }

@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row pt-5 row-xs-2">
+  <!-- Column Item -->
+    {% for column_item in column_component.column_items %}
+      {% if column_item.text_field == null  and column_item.media_item != null%}
+        {% set noText = 'image-only' %}
+      {% else %}
+        {% set noText = '' %}
+      {% endif %}
+
+      <div class="col {{noText}} {{column_item.column_order}}">
+        {% if column_item.text_field != null %}
+            {{column_item.text_field|raw}}
+        {% endif %}
+        {% if column_item.media_item != null %}
+        {% set media_field = column_item.media_item%}
+        {% set count = column_component.column_items|length %}
+          {% include 'paragraph--media-element.html.twig' with {'type': 'column-image','style': style,'main_media': media_field} %}
+          {{content}}
+        {% endif %}
+      </div>
+    {% endfor %}
+  <!-- Column Item -->
+  </div>
+</div>

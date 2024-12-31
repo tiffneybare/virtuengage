@@ -1,0 +1,37 @@
+uuid: 9d2ef9ea-e906-4252-9b7d-f6e737afe3d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.title_element.field_color
+    - field.field.paragraph.title_element.field_font_size
+    - field.field.paragraph.title_element.field_label
+    - paragraphs.paragraphs_type.title_element
+id: paragraph.title_element.default
+targetEntityType: paragraph
+bundle: title_element
+mode: default
+content:
+  field_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_font_size:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter Text'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

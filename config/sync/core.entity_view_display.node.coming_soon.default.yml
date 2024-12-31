@@ -1,0 +1,32 @@
+uuid: 4a3e420c-6d37-49bf-8b55-8cedf06cbef6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.coming_soon.field_domain_access
+    - field.field.node.coming_soon.field_domain_all_affiliates
+    - field.field.node.coming_soon.field_domain_source
+    - field.field.node.coming_soon.field_hero_banner
+    - node.type.coming_soon
+  module:
+    - entity_reference_revisions
+    - user
+id: node.coming_soon.default
+targetEntityType: node
+bundle: coming_soon
+mode: default
+content:
+  field_hero_banner:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
+  field_domain_source: true
+  links: true

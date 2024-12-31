@@ -1,0 +1,18 @@
+uuid: 1de3d2a2-3266-4862-84c4-8d1f78a1a5f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Content Page'
+type: content_page
+description: 'This content type is for general content pages'
+help: null
+new_revision: true
+preview_mode: 2
+display_submitted: true

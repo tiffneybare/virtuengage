@@ -1,0 +1,14 @@
+uuid: c642481f-19a7-4170-867f-de9cecd49c6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.virtuengage_com
+  module:
+    - domain_access
+id: domain_access_add_action.virtuengage_com
+label: 'Add selected content to the Virtu Engage domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id: virtuengage_com

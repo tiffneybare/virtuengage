@@ -1,0 +1,24 @@
+uuid: ce0710c1-db76-4738-a803-e20c1a26d7c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_component.field_media_item
+    - paragraphs.paragraphs_type.media_component
+  module:
+    - entity_reference_revisions
+id: paragraph.media_component.default
+targetEntityType: paragraph
+bundle: media_component
+mode: default
+content:
+  field_media_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

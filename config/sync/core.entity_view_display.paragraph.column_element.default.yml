@@ -1,0 +1,35 @@
+uuid: 01a4dc2b-ec9a-4181-a2e7-44b1c1f5e988
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.column_element.field_column_order
+    - field.field.paragraph.column_element.field_media_item
+    - field.field.paragraph.column_element.field_text_field
+    - paragraphs.paragraphs_type.column_element
+  module:
+    - entity_reference_revisions
+    - text
+id: paragraph.column_element.default
+targetEntityType: paragraph
+bundle: column_element
+mode: default
+content:
+  field_media_item:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_field:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_column_order: true

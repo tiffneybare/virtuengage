@@ -1,0 +1,18 @@
+uuid: 32e7eae8-9429-42a2-bbfb-c31b64352786
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_component.field_color
+    - field.field.paragraph.tab_component.field_heading
+    - field.field.paragraph.tab_component.field_tab_item
+    - paragraphs.paragraphs_type.tab_component
+id: paragraph.tab_component.default
+targetEntityType: paragraph
+bundle: tab_component
+mode: default
+content: {  }
+hidden:
+  field_color: true
+  field_heading: true
+  field_tab_item: true

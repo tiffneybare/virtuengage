@@ -1,0 +1,5 @@
+name: Virtu Engage Admin
+description: Custom modifications to admin areas.
+type: module
+core_version_requirement:  ^10
+package: Virtu Engage

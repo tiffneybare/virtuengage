@@ -1,0 +1,23 @@
+uuid: 3636bc2c-2a00-4caf-a6fd-d38d1f886daa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_integer
+    - paragraphs.paragraphs_type.integer_element
+id: paragraph.integer_element.field_integer
+field_name: field_integer
+entity_type: paragraph
+bundle: integer_element
+label: Integer
+description: 'Enter a number value'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

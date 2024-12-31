@@ -1,0 +1,10 @@
+uuid: 4bbf489e-01d2-452c-86c7-39043a49bb24
+langcode: en
+status: true
+dependencies: {  }
+id: media_component
+label: 'Media Component'
+icon_uuid: null
+icon_default: null
+description: 'Select a media item to display'
+behavior_plugins: {  }

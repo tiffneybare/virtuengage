@@ -1,0 +1,15 @@
+
+{% for key, block in block_content.section_content %}
+        {% if key == 'logo_list_component' %}
+        {% include 'paragraph--logo-list-component.html.twig' with {'logo_list': block} %}
+                {{content}}
+        {% endif %}
+        {% if key == 'logo_gallery' %}
+        {% include 'paragraph--logo-gallery.html.twig' with {'logo_gallery': block} %}
+                {{content}}
+        {% endif %}
+        {% if key == 'media_gallery_component' %}
+        {% include 'paragraph--media-gallery-component.html.twig' with {'media_gallery':block} %}
+                {{content}}
+        {% endif %}
+{% endfor %}

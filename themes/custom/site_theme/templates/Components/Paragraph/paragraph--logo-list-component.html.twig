@@ -1,0 +1,13 @@
+<div class="container d-flex">
+  <div class="row align-items-center mx-auto p-3">
+  <!-- Logo List -->
+    {% for logo in logo_list %}
+  <div class="p-2 align-bottom logo-list">
+      <div>
+        <img src="{{logo.uri}}" class="card-img-top" alt="{{logo.alt}}">
+      </div>
+    </div>
+      {% endfor %}
+  <!-- Logo List -->
+  </div>
+</div>

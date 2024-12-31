@@ -1,0 +1,14 @@
+uuid: 643f448f-230d-4801-9c77-d38739b7ba3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.redjuice_agency
+  module:
+    - domain_access
+id: domain_access_add_editor_action.redjuice_agency
+label: 'Add editors to the Red Juice domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: redjuice_agency

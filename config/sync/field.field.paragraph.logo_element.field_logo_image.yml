@@ -1,0 +1,29 @@
+uuid: 03d62bd7-f6d5-42f1-92cf-ec76a2b6f75f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_logo_image
+    - media.type.image
+    - paragraphs.paragraphs_type.logo_element
+id: paragraph.logo_element.field_logo_image
+field_name: field_logo_image
+entity_type: paragraph
+bundle: logo_element
+label: Image
+description: '<b>Size:</b> Width: 29px Height: 29px'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: changed
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

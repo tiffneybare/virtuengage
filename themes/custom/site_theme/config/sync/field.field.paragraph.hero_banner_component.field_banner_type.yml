@@ -1,0 +1,23 @@
+uuid: 2a7db52a-0d15-4f0d-9a7e-9f6648696544
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_type
+    - paragraphs.paragraphs_type.hero_banner_component
+  module:
+    - options
+id: paragraph.hero_banner_component.field_banner_type
+field_name: field_banner_type
+entity_type: paragraph
+bundle: hero_banner_component
+label: 'Banner Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

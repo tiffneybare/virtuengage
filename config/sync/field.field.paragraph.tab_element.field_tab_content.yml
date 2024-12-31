@@ -1,0 +1,106 @@
+uuid: 12228c7c-96e9-4fba-a092-f3c9b8ed8ec5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_content
+    - paragraphs.paragraphs_type.accordion_component
+    - paragraphs.paragraphs_type.block_component
+    - paragraphs.paragraphs_type.column_component
+    - paragraphs.paragraphs_type.heading_component
+    - paragraphs.paragraphs_type.hero_banner_component
+    - paragraphs.paragraphs_type.logo_list_component
+    - paragraphs.paragraphs_type.media_gallery_component
+    - paragraphs.paragraphs_type.tab_element
+  module:
+    - entity_reference_revisions
+id: paragraph.tab_element.field_tab_content
+field_name: field_tab_content
+entity_type: paragraph
+bundle: tab_element
+label: 'Tab Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_component: accordion_component
+      column_component: column_component
+      heading_component: heading_component
+      hero_banner_component: hero_banner_component
+      logo_list_component: logo_list_component
+      media_gallery_component: media_gallery_component
+      block_component: block_component
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: -45
+        enabled: true
+      accordion_row_element:
+        weight: -44
+        enabled: false
+      block_component:
+        weight: -29
+        enabled: true
+      column_component:
+        weight: -43
+        enabled: true
+      column_element:
+        weight: -42
+        enabled: false
+      heading_component:
+        weight: -41
+        enabled: true
+      hero_banner_component:
+        weight: -40
+        enabled: true
+      integer_element:
+        weight: -39
+        enabled: false
+      jumbotron_component:
+        weight: -36
+        enabled: false
+      logo_element:
+        weight: -38
+        enabled: false
+      logo_gallery:
+        weight: -34
+        enabled: false
+      logo_list_component:
+        weight: -37
+        enabled: true
+      media_component:
+        weight: -32
+        enabled: false
+      media_element:
+        weight: -35
+        enabled: false
+      media_gallery_component:
+        weight: -33
+        enabled: true
+      rating_element:
+        weight: -31
+        enabled: false
+      section_content:
+        weight: -30
+        enabled: false
+      stat_element:
+        weight: -27
+        enabled: false
+      stats_component:
+        weight: -28
+        enabled: false
+      tab_component:
+        weight: -26
+        enabled: false
+      tab_element:
+        weight: -25
+        enabled: false
+      title_element:
+        weight: -24
+        enabled: false
+field_type: entity_reference_revisions

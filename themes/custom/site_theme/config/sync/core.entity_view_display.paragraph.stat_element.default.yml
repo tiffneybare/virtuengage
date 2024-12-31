@@ -1,0 +1,31 @@
+uuid: 61109664-7849-4440-b730-df9f1d1bf2a9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_element.field_integer
+    - field.field.paragraph.stat_element.field_label
+    - paragraphs.paragraphs_type.stat_element
+id: paragraph.stat_element.default
+targetEntityType: paragraph
+bundle: stat_element
+mode: default
+content:
+  field_integer:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_label:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

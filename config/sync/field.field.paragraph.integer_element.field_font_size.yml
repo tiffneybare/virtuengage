@@ -1,0 +1,21 @@
+uuid: c480c483-17ba-4ad4-a9e8-84850c21a3f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_font_size
+    - paragraphs.paragraphs_type.integer_element
+  module:
+    - options
+id: paragraph.integer_element.field_font_size
+field_name: field_font_size
+entity_type: paragraph
+bundle: integer_element
+label: 'Font Size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,34 @@
+uuid: 0396b9f4-15fc-4948-af12-7ab29f099811
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_element.field_main_image_video_item
+    - field.field.paragraph.media_element.field_media_format
+    - paragraphs.paragraphs_type.media_element
+  module:
+    - media_library
+id: paragraph.media_element.default
+targetEntityType: paragraph
+bundle: media_element
+mode: default
+content:
+  field_main_image_video_item:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types:
+        - image
+        - video
+        - remote_video
+    third_party_settings: {  }
+  field_media_format:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

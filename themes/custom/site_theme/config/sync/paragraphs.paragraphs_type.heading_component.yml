@@ -1,0 +1,10 @@
+uuid: 54839ba3-7c94-45ea-8a58-8edaa66cb103
+langcode: en
+status: true
+dependencies: {  }
+id: heading_component
+label: 'Heading Component'
+icon_uuid: null
+icon_default: null
+description: 'The component allows you to add a heading to a section.'
+behavior_plugins: {  }

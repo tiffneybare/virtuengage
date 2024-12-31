@@ -1,0 +1,8 @@
+uuid: 1e577e98-3def-4f91-b5ac-1398c26749ba
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: 'Content Creator'

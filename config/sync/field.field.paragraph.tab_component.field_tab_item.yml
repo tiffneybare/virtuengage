@@ -1,0 +1,85 @@
+uuid: ee65e391-5f91-4d72-af58-0818f20013d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_item
+    - paragraphs.paragraphs_type.tab_component
+    - paragraphs.paragraphs_type.tab_element
+  module:
+    - entity_reference_revisions
+id: paragraph.tab_component.field_tab_item
+field_name: field_tab_item
+entity_type: paragraph
+bundle: tab_component
+label: 'Tab Item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      tab_element: tab_element
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: 20
+        enabled: false
+      accordion_row_element:
+        weight: 21
+        enabled: false
+      column_element:
+        weight: 22
+        enabled: false
+      content_component:
+        weight: 23
+        enabled: false
+      heading_component:
+        weight: 24
+        enabled: false
+      hero_banner_component:
+        weight: 25
+        enabled: false
+      integer_element:
+        weight: 26
+        enabled: false
+      logo_element:
+        weight: 27
+        enabled: false
+      logo_list_component:
+        weight: 28
+        enabled: false
+      main_media_item:
+        weight: 29
+        enabled: false
+      media_element:
+        weight: 30
+        enabled: false
+      media_gallery_component:
+        weight: 31
+        enabled: false
+      mobile_media_item:
+        weight: 32
+        enabled: false
+      rating_element:
+        weight: 33
+        enabled: false
+      review_element:
+        weight: 34
+        enabled: false
+      stats_component:
+        weight: 35
+        enabled: false
+      tab_component:
+        weight: 36
+        enabled: false
+      tab_element:
+        weight: 37
+        enabled: true
+      title_element:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

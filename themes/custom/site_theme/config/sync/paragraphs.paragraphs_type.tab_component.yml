@@ -1,0 +1,10 @@
+uuid: 7476cc1b-d6a9-41fa-a363-17e7201d74da
+langcode: en
+status: true
+dependencies: {  }
+id: tab_component
+label: 'Tab Component'
+icon_uuid: null
+icon_default: null
+description: 'This component is used to create content in tabs'
+behavior_plugins: {  }

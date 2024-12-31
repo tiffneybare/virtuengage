@@ -1,0 +1,37 @@
+uuid: 1ba72389-8b82-4ee9-8df4-3ee7ebd5f8b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_gallery.field_logo
+    - paragraphs.paragraphs_type.logo_gallery
+  module:
+    - paragraphs
+id: paragraph.logo_gallery.default
+targetEntityType: paragraph
+bundle: logo_gallery
+mode: default
+content:
+  field_logo:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: 'Logo Item'
+      title_plural: 'Logo Items'
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: logo_element
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: '0'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

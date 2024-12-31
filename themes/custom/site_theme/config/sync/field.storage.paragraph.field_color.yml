@@ -1,0 +1,39 @@
+uuid: 95cf492e-68e8-4973-a1ea-6f286c6e45fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_color
+field_name: field_color
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: none
+      label: None
+    -
+      value: black-bg
+      label: Black
+    -
+      value: white-bg
+      label: White
+    -
+      value: dove-grey-bg
+      label: 'Dove Grey'
+    -
+      value: dark-grey-bg
+      label: 'Dark Grey'
+    -
+      value: crimson-red-bg
+      label: 'Crimson Red'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

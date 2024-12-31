@@ -1,0 +1,10 @@
+uuid: 1d767e60-0117-43b5-a271-fc8c424e9a86
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner_component
+label: 'Hero Banner Component'
+icon_uuid: null
+icon_default: null
+description: 'This component allows the creation of a hero banner.'
+behavior_plugins: {  }

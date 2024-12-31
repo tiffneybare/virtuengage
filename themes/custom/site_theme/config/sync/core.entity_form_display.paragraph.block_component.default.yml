@@ -1,0 +1,25 @@
+uuid: b03df2fa-aa6a-4a36-bcd3-1c43f13151b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_component.field_block_element
+    - paragraphs.paragraphs_type.block_component
+id: paragraph.block_component.default
+targetEntityType: paragraph
+bundle: block_component
+mode: default
+content:
+  field_block_element:
+    type: entity_reference_autocomplete
+    weight: 0
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,134 @@
+uuid: e4fcc66d-08d4-4335-b9f4-3657a4723928
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+    - block_content.type.content_block
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+    - node.type.coming_soon
+    - node.type.content_page
+    - node.type.landing_page
+  module:
+    - block_content
+    - contextual
+    - file
+    - media
+    - node
+    - path
+    - shortcut
+    - system
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access block library'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access shortcuts'
+  - 'access toolbar'
+  - 'administer media'
+  - 'administer media types'
+  - 'administer url aliases'
+  - 'create audio media'
+  - 'create basic block content'
+  - 'create coming_soon content'
+  - 'create content_block block content'
+  - 'create content_page content'
+  - 'create document media'
+  - 'create image media'
+  - 'create landing_page content'
+  - 'create media'
+  - 'create remote_video media'
+  - 'create url aliases'
+  - 'create video media'
+  - 'customize shortcut links'
+  - 'delete any audio media'
+  - 'delete any audio media revisions'
+  - 'delete any basic block content'
+  - 'delete any basic block content revisions'
+  - 'delete any coming_soon content'
+  - 'delete any content_block block content'
+  - 'delete any content_page content'
+  - 'delete any document media'
+  - 'delete any document media revisions'
+  - 'delete any file'
+  - 'delete any image media'
+  - 'delete any image media revisions'
+  - 'delete any landing_page content'
+  - 'delete any media'
+  - 'delete any remote_video media'
+  - 'delete any remote_video media revisions'
+  - 'delete any video media'
+  - 'delete any video media revisions'
+  - 'delete coming_soon revisions'
+  - 'delete content_page revisions'
+  - 'delete landing_page revisions'
+  - 'delete media'
+  - 'delete own audio media'
+  - 'delete own coming_soon content'
+  - 'delete own content_page content'
+  - 'delete own document media'
+  - 'delete own files'
+  - 'delete own image media'
+  - 'delete own landing_page content'
+  - 'delete own remote_video media'
+  - 'delete own video media'
+  - 'edit any audio media'
+  - 'edit any basic block content'
+  - 'edit any coming_soon content'
+  - 'edit any content_block block content'
+  - 'edit any content_page content'
+  - 'edit any document media'
+  - 'edit any image media'
+  - 'edit any landing_page content'
+  - 'edit any remote_video media'
+  - 'edit any video media'
+  - 'edit own audio media'
+  - 'edit own coming_soon content'
+  - 'edit own content_page content'
+  - 'edit own document media'
+  - 'edit own image media'
+  - 'edit own landing_page content'
+  - 'edit own remote_video media'
+  - 'edit own video media'
+  - 'revert all revisions'
+  - 'revert any audio media revisions'
+  - 'revert any basic block content revisions'
+  - 'revert any content_block block content revisions'
+  - 'revert any document media revisions'
+  - 'revert any image media revisions'
+  - 'revert any remote_video media revisions'
+  - 'revert any video media revisions'
+  - 'revert coming_soon revisions'
+  - 'revert content_page revisions'
+  - 'revert landing_page revisions'
+  - 'update any media'
+  - 'update media'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view any audio media revisions'
+  - 'view any basic block content history'
+  - 'view any content_block block content history'
+  - 'view any document media revisions'
+  - 'view any image media revisions'
+  - 'view any remote_video media revisions'
+  - 'view any video media revisions'
+  - 'view coming_soon revisions'
+  - 'view content_page revisions'
+  - 'view landing_page revisions'
+  - 'view media'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'

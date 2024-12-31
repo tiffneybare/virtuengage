@@ -1,0 +1,14 @@
+uuid: 620324e2-0dee-4c32-b4b4-b04376cf978c
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.mikestate_com
+  module:
+    - domain_access
+id: domain_access_remove_action.mikestate_com
+label: 'Remove selected content from the Mike Taste domain'
+type: node
+plugin: domain_access_remove_action
+configuration:
+  domain_id: mikestate_com

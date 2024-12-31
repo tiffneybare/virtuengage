@@ -1,0 +1,21 @@
+uuid: fa4cf251-c948-4233-bd02-214f492d78d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_font_size
+    - paragraphs.paragraphs_type.title_element
+  module:
+    - options
+id: paragraph.title_element.field_font_size
+field_name: field_font_size
+entity_type: paragraph
+bundle: title_element
+label: 'Font Size'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

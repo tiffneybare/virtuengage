@@ -1,0 +1,44 @@
+uuid: fa6b0f9c-1cea-4daa-b3eb-696e99d006a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.heading_component.field_color
+    - field.field.paragraph.heading_component.field_font_size
+    - field.field.paragraph.heading_component.field_label
+    - field.field.paragraph.heading_component.field_text_alignment
+    - paragraphs.paragraphs_type.heading_component
+id: paragraph.heading_component.default
+targetEntityType: paragraph
+bundle: heading_component
+mode: default
+content:
+  field_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_font_size:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter Text'
+    third_party_settings: {  }
+  field_text_alignment:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

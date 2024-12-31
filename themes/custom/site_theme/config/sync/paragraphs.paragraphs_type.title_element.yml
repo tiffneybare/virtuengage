@@ -1,0 +1,10 @@
+uuid: ea60ab5b-bed4-4e3a-903b-1fdf72085ebd
+langcode: en
+status: true
+dependencies: {  }
+id: title_element
+label: 'Title Element'
+icon_uuid: null
+icon_default: null
+description: "<p>This element is used to display a title with the following options:</br>\r\n<ul>\r\n<li>Text</li>\r\n<li>Color</li>\r\n<li>Size</li>\r\n</ul>\r\n</p>\r\n"
+behavior_plugins: {  }

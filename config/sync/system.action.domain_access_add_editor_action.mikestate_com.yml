@@ -1,0 +1,14 @@
+uuid: 3252f7df-f60e-4f83-ae57-7b0f0328d064
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.mikestate_com
+  module:
+    - domain_access
+id: domain_access_add_editor_action.mikestate_com
+label: 'Add editors to the Mike Taste domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id: mikestate_com

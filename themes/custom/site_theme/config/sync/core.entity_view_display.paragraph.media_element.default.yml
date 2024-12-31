@@ -1,0 +1,24 @@
+uuid: 96a465f1-af98-47c1-8cc1-96777e89c346
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_element.field_main_image_video_item
+    - field.field.paragraph.media_element.field_media_format
+    - paragraphs.paragraphs_type.media_element
+id: paragraph.media_element.default
+targetEntityType: paragraph
+bundle: media_element
+mode: default
+content:
+  field_main_image_video_item:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_media_format: true

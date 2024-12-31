@@ -1,0 +1,21 @@
+uuid: 47e3025e-06d8-436d-947b-b20d96b0c7a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_media_format
+    - paragraphs.paragraphs_type.media_element
+  module:
+    - options
+id: paragraph.media_element.field_media_format
+field_name: field_media_format
+entity_type: paragraph
+bundle: media_element
+label: 'Media Format'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

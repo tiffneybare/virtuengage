@@ -1,0 +1,11 @@
+uuid: 6512eef5-8459-48df-98d4-1ea9f64de820
+langcode: en
+status: true
+dependencies: {  }
+id: mikestate_com
+domain_id: 8844504
+hostname: mikestate.com
+name: 'Mike Taste'
+scheme: https
+weight: 3
+is_default: false

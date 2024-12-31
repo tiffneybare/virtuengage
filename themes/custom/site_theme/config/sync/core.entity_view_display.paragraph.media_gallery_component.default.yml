@@ -1,0 +1,33 @@
+uuid: 383e1b2b-4870-4bb9-a43e-037b047d88ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.media_gallery_component.field_label
+    - field.field.paragraph.media_gallery_component.field_media_items
+    - paragraphs.paragraphs_type.media_gallery_component
+  module:
+    - entity_reference_revisions
+id: paragraph.media_gallery_component.default
+targetEntityType: paragraph
+bundle: media_gallery_component
+mode: default
+content:
+  field_label:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_media_items:
+    type: entity_reference_revisions_entity_view
+    label: inline
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

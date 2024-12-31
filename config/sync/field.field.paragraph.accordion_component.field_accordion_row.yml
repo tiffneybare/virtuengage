@@ -1,0 +1,85 @@
+uuid: a1ed9f80-4daa-472c-8cbe-14ac80dcc07f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_row
+    - paragraphs.paragraphs_type.accordion_component
+    - paragraphs.paragraphs_type.accordion_row_element
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion_component.field_accordion_row
+field_name: field_accordion_row
+entity_type: paragraph
+bundle: accordion_component
+label: 'Accordion Row'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      accordion_row_element: accordion_row_element
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: 18
+        enabled: false
+      accordion_row_element:
+        weight: 19
+        enabled: true
+      column_element:
+        weight: 22
+        enabled: false
+      content_component:
+        weight: 21
+        enabled: false
+      heading_component:
+        weight: 22
+        enabled: false
+      hero_banner_component:
+        weight: 23
+        enabled: false
+      integer_element:
+        weight: 24
+        enabled: false
+      logo_element:
+        weight: 25
+        enabled: false
+      logo_list_component:
+        weight: 26
+        enabled: false
+      main_media_item:
+        weight: 27
+        enabled: false
+      media_element:
+        weight: 28
+        enabled: false
+      media_gallery_component:
+        weight: 29
+        enabled: false
+      mobile_media_item:
+        weight: 30
+        enabled: false
+      rating_element:
+        weight: 31
+        enabled: false
+      review_element:
+        weight: 32
+        enabled: false
+      stats_component:
+        weight: 33
+        enabled: false
+      tab_component:
+        weight: 36
+        enabled: false
+      tab_element:
+        weight: 37
+        enabled: false
+      title_element:
+        weight: 34
+        enabled: false
+field_type: entity_reference_revisions

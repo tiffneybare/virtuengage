@@ -1,0 +1,14 @@
+uuid: cbf12807-9558-44c8-9ce3-ce4680e589fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.redjuice_agency
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.redjuice_agency
+label: 'Remove editors from the Red Juice domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: redjuice_agency

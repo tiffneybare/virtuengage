@@ -1,0 +1,37 @@
+uuid: 66420fb1-5b5a-418d-8cf0-d715f0e33e6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stats_component.field_stats
+    - paragraphs.paragraphs_type.stats_component
+  module:
+    - paragraphs
+id: paragraph.stats_component.default
+targetEntityType: paragraph
+bundle: stats_component
+mode: default
+content:
+  field_stats:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Stat
+      title_plural: Stats
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: stat_element
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

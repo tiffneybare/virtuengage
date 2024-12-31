@@ -1,0 +1,10 @@
+uuid: e904f481-69ca-4ff4-9f7c-76290f9b21cd
+langcode: en
+status: true
+dependencies: {  }
+id: logo_element
+label: 'Logo Element'
+icon_uuid: null
+icon_default: null
+description: 'This element allows you to add a logo.'
+behavior_plugins: {  }

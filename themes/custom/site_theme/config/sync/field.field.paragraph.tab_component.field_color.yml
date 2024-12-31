@@ -1,0 +1,21 @@
+uuid: dff46fe1-485e-4e08-8450-40e6209df524
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_color
+    - paragraphs.paragraphs_type.tab_component
+  module:
+    - options
+id: paragraph.tab_component.field_color
+field_name: field_color
+entity_type: paragraph
+bundle: tab_component
+label: 'Tabbed Section Background Color'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

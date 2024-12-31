@@ -1,0 +1,24 @@
+uuid: d8932549-6405-4f69-b968-3119d443e139
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_field
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.column_element
+  module:
+    - text
+id: paragraph.column_element.field_text_field
+field_name: field_text_field
+entity_type: paragraph
+bundle: column_element
+label: 'Text field'
+description: 'Enter text you want to display'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

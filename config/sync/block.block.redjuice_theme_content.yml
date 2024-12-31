@@ -1,0 +1,22 @@
+uuid: e4777aed-0afe-403e-9921-e7bc1ad62d81
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - redjuice_theme
+_core:
+  default_config_hash: 1o0W13wt232YmsDYiRA5xtlFq0L2WNS7FmIVbBeuhIY
+id: redjuice_theme_content
+theme: redjuice_theme
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

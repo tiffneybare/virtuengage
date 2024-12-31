@@ -1,0 +1,10 @@
+uuid: c8384244-e539-4554-8489-e92724bf9768
+langcode: en
+status: true
+dependencies: {  }
+id: media_element
+label: 'Media Element'
+icon_uuid: null
+icon_default: null
+description: "<p>This element is used to create media items with the following options:</br>\r\n<ul>\r\n<li>Main Image</li>\r\n<li>Mobile Image</li>\r\n</ul>\r\n</p>"
+behavior_plugins: {  }

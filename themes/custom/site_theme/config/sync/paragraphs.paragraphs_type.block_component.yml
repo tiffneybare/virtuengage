@@ -1,0 +1,10 @@
+uuid: ff3c6648-7848-4515-8b7a-811e6f959a27
+langcode: en
+status: true
+dependencies: {  }
+id: block_component
+label: 'Block Component'
+icon_uuid: null
+icon_default: null
+description: 'Select re-usable blocks to add to a page'
+behavior_plugins: {  }

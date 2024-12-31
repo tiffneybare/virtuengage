@@ -1,0 +1,19 @@
+div[id^="edit-field-page-elements"] .paragraphs-subform .field--widget-options-select.paragraphs-content {
+  float: left;
+  padding-right: 15px;
+}
+.field-multiple-drag.paragraph-bullet,.paragraphs-badge {
+  display: none !important;
+}
+
+tr.draggable.paragraph-type--media-element td {
+  padding-left: 20px;
+}
+
+.js .paragraph-type-label,.js .paragraph-type {
+  overflow: visible !important;
+  /*font-size: 1.15em;*/
+}
+.js-form-type-textarea {
+  clear: both;
+}

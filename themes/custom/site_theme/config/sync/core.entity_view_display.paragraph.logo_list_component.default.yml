@@ -1,0 +1,24 @@
+uuid: b4daedb8-ee87-4900-b529-dfde1977cf77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.logo_list_component.field_logo
+    - paragraphs.paragraphs_type.logo_list_component
+  module:
+    - entity_reference_revisions
+id: paragraph.logo_list_component.default
+targetEntityType: paragraph
+bundle: logo_list_component
+mode: default
+content:
+  field_logo:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: preview
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

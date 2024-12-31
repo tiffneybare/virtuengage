@@ -1,0 +1,16 @@
+uuid: 631e05ee-c5fd-48e9-b61e-972997b80e22
+langcode: en
+status: true
+dependencies: {  }
+id: bulk_upload
+label: 'Bulk Upload'
+media_types:
+  audio: audio
+  document: document
+  image: image
+  remote_video: remote_video
+  video: video
+form_mode: media_library
+upload_location: /bulk_upload
+show_alt: null
+show_title: null

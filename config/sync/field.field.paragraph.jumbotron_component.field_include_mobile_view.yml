@@ -1,0 +1,23 @@
+uuid: bcbcc03f-795b-49a7-b1ef-cb32ac34fdf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_include_mobile_view
+    - paragraphs.paragraphs_type.jumbotron_component
+id: paragraph.jumbotron_component.field_include_mobile_view
+field_name: field_include_mobile_view
+entity_type: paragraph
+bundle: jumbotron_component
+label: 'Include Mobile View'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

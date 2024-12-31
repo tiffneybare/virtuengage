@@ -1,0 +1,10 @@
+uuid: b4fee0ef-6438-4301-b06a-53cd79b881d8
+langcode: en
+status: true
+dependencies: {  }
+id: stats_component
+label: 'Stats Component'
+icon_uuid: null
+icon_default: null
+description: "<p>This component allows you to display stats with the following options:</br>\r\n<ul>\r\n<li>Stat Value</li>\r\n<li>Stat Value Color</li>\r\n<li>Stat Value Size</li>\r\n<li>Stat Label</li>\r\n<li>Stat Label Color</li>\r\n<li>Stat Label Size</li>\r\n</ul>\r\n</p>\r\n"
+behavior_plugins: {  }

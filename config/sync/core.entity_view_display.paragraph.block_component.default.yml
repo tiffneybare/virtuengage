@@ -1,0 +1,14 @@
+uuid: f90a1e6b-0028-4c1e-ba1c-12303bb206be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block_component.field_block_element
+    - paragraphs.paragraphs_type.block_component
+id: paragraph.block_component.default
+targetEntityType: paragraph
+bundle: block_component
+mode: default
+content: {  }
+hidden:
+  field_block_element: true

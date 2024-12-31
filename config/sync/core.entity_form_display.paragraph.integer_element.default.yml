@@ -1,0 +1,36 @@
+uuid: 779a8b15-ba95-443e-b066-a77772b071e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.integer_element.field_color
+    - field.field.paragraph.integer_element.field_font_size
+    - field.field.paragraph.integer_element.field_integer
+    - paragraphs.paragraphs_type.integer_element
+id: paragraph.integer_element.default
+targetEntityType: paragraph
+bundle: integer_element
+mode: default
+content:
+  field_color:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_font_size:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_integer:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: 'Enter Integer'
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

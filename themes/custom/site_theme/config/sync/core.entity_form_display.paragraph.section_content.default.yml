@@ -1,0 +1,53 @@
+uuid: ea9bdc54-3242-4617-846f-de5a53860051
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.section_content.field_color
+    - field.field.paragraph.section_content.field_content_section
+    - field.field.paragraph.section_content.field_section_title
+    - paragraphs.paragraphs_type.section_content
+  module:
+    - paragraphs
+id: paragraph.section_content.default
+targetEntityType: paragraph
+bundle: section_content
+mode: default
+content:
+  field_color:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_section:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: Content
+      title_plural: Content
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_section_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

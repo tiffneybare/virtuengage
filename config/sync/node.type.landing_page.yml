@@ -1,0 +1,17 @@
+uuid: 0aaed856-cee5-4441-af05-08f82bcda768
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Landing Page'
+type: landing_page
+description: 'This content type is for creating landing pages that display information or link to additional information.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

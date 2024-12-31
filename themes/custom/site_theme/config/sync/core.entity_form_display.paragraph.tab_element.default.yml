@@ -1,0 +1,46 @@
+uuid: 74e487ed-61c9-465a-955f-2d6f1b05f18c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.tab_element.field_label
+    - field.field.paragraph.tab_element.field_tab_content
+    - paragraphs.paragraphs_type.tab_element
+  module:
+    - paragraphs
+id: paragraph.tab_element.default
+targetEntityType: paragraph
+bundle: tab_element
+mode: default
+content:
+  field_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Enter Text'
+    third_party_settings: {  }
+  field_tab_content:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: 'Tab Content'
+      title_plural: 'Tabs Content'
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

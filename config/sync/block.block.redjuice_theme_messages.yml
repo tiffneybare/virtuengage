@@ -1,0 +1,22 @@
+uuid: b01aea42-46c0-4a38-bb95-9433c702dac5
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - redjuice_theme
+_core:
+  default_config_hash: 9LdMj38y4GDi23GrIUtIZIV1bJEn1C47N19jrswvcLc
+id: redjuice_theme_messages
+theme: redjuice_theme
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }

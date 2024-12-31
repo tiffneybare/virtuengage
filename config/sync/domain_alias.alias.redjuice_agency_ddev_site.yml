@@ -1,0 +1,9 @@
+uuid: 65f2a6ce-b1b1-4d9c-8160-77f5c0ce94fa
+langcode: en
+status: true
+dependencies: {  }
+id: redjuice_agency_ddev_site
+domain_id: redjuice_agency
+pattern: redjuice.agency.ddev.site
+redirect: 0
+environment: default

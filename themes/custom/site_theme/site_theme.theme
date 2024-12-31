@@ -1,0 +1,440 @@
+<?php
+
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Implements theme_suggestions_HOOK_alter().
+ */
+function site_theme_theme_suggestions_paragraph_alter(array &$suggestions, array $variables) {
+  /** @var \Drupal\paragraphs\ParagraphInterface $paragraph */
+  $paragraph = $variables['elements']['#paragraph'];
+$paragraph_type = $paragraph->getType();
+  $suggestions[] = 'paragraph__' . $paragraph_type ;
+if ($node = \Drupal::routeMatch()->getParameter('node')) {
+  $suggestions[] = 'paragraph__' . $paragraph_type  . '__' .  $node->bundle();
+  }
+}
+
+/**
+ * Implements theme_suggestions_HOOK_alter().
+ */
+function site_theme_theme_suggestions_region_alter(array &$suggestions, array $variables) {
+  $region = $variables["elements"]["#region"];
+  if (\Drupal::routeMatch()->getParameter('node')) {
+      // Get the node type.
+      $node = \Drupal::routeMatch()->getParameter('node');
+      $type = $node->getType();
+      $suggestions[] = $variables["theme_hook_original"] . '__' . $region . '__' . $type;
+  }
+
+}
+
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function site_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+  $suggestions[] = 'page__' . $node->bundle();
+  }
+}
+
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+
+function site_theme_preprocess_paragraph__hero_banner_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $variables['banner_type'] = $paragraph->field_banner_type->value;
+  $variables['text_overlay']  = $paragraph->field_text_overlay->value;
+  $variables['media_item'] = get_paragraph_media_item($paragraph->field_media_item[0]->target_id);
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+
+function site_theme_preprocess_paragraph__logo_list_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $field_logos = $paragraph->get('field_logo');
+
+  $variables['logo_list'] = get_logos($field_logos);
+}
+
+function get_logos($field_logos){
+  $logo_list = [];
+  if (count($field_logos) > 1) {
+  foreach ($field_logos as $key => $value) {
+    $logo_list = get_paragraph_media_info($field_logos[$key]->target_id, 'field_logo_image');
+  }
+  }else{
+    $logo_list = get_paragraph_media_info($field_logos[0]->target_id, 'field_logo_image');
+  }
+  return $logo_list;
+}
+
+function get_paragraph_logo_list_item($target_id){
+  $field_logos = Paragraph::load($target_id);
+  return get_logos($field_logos->get('field_logo'));
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+
+function site_theme_preprocess_paragraph__tab_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $tab_items = [];
+  $tab_items['background_color'] = $paragraph->get('field_color')[0]->value != 'none' ? $paragraph->get('field_color')[0]->value : null;
+  foreach ( $paragraph->get('field_tab_item') as $key => $value) {
+    $tab_items['tab_section_id'] = 'tab-' . $key;
+    $tab_items['tab_key'] = $key;
+    $entity = $value->get('entity')->getTarget()->getValue();
+    $tab_content = $entity->field_tab_content;
+    $tab_items['tab_items'][$key]['tab_label'] = $entity->field_label[0]->value;
+    $tab_items['tab_items'][$key] =  get_paragraph_tab_item($tab_content,$tab_items['tab_items'][$key]['tab_label']);
+  }
+  $variables['tab_elements'] = $tab_items;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+
+function site_theme_preprocess_paragraph__logo_gallery(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $field_logos = $paragraph->get('field_logo');
+  $logo_gallery = [];
+  foreach ($field_logos as $key => $value) {
+    $logo_gallery = get_paragraph_media_info($field_logos[$key]->target_id, 'field_logo_image');
+  }
+  $variables['logo_gallery']  = $logo_gallery;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function site_theme_preprocess_paragraph__section_content(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $variables['section_color']  = $paragraph->get('field_color')[0]->value != 'none' ? $paragraph->get('field_color')[0]->value : null;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function site_theme_preprocess_paragraph__media_element(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $media_element = $paragraph->field_main_image_video_item[0]->target_id;
+  $variables['main_media'] = get_media_properties($media_element, ['uri','alt']);
+  $variables['main_media']['format'] = $paragraph->field_media_format[0]->value;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function site_theme_preprocess_paragraph__column_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $columns = $paragraph->get('field_column_item');
+  $column_item = [];
+  foreach ($columns as $key => $value) {
+    $column_item[] = get_paragraph_column_item($columns[$key]->target_id);
+  }
+  $variables['column_component']['column_items']  = $column_item;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function site_theme_preprocess_paragraph__media_gallery_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $columns = $paragraph->get('field_column_item');
+  $column_item = [];
+  foreach ($columns as $key => $value) {
+    $column_item[] = get_paragraph_column_item($columns[$key]->target_id);
+  }
+  $variables['column_component']['column_items']  = $column_item;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function site_theme_preprocess_paragraph__accordion_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $accordion_rows = $paragraph->field_accordion_row;
+  $accordion_items = [];
+  foreach ($accordion_rows as $key => $value) {
+    $accordion_items[] = get_paragraph_based_on_type($value->target_id);
+  }
+  $variables['accordion_style'] = $paragraph->field_accordion_style[0]->value;
+  $variables['accordion_items']  = $accordion_items;
+}
+
+/**
+ * Implements template_preprocess_paragraph().
+ */
+function site_theme_preprocess_paragraph__block_component(&$variables) {
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = $variables['paragraph'];
+  $block_element = $paragraph->field_block_element;
+  foreach ($block_element as $block) {
+    $entity = $block->get('entity')->getTarget()->getValue();
+    $paragraph_target_id = $entity->field_content->target_id;
+    $block_name = $entity->info->value;
+    $block_content = get_paragraph_block_item($paragraph_target_id,$block_name);
+  }
+    $variables['block_content']['section_content'] = $block_content;
+}
+
+function site_theme_preprocess_block__system_menu_block__main(&$variables) {
+  /*$block = \Drupal\block_content\Entity\BlockContent::load(2);
+  $variables['siteTag'] = $block ? \Drupal::entityTypeManager()->getViewBuilder('block_content')->view($block) : null;*/
+  $variables['siteLogo'] = \Drupal::theme()->getActiveTheme()->getLogo();
+}
+
+
+/**
+ * Implements template_preprocess_region().
+ */
+function site_theme_preprocess_region__footer(&$variables) {
+  $footerblock = \Drupal::service('theme.manager')->getActiveTheme()->getName() . '_sitefooter';
+  $block = $variables['elements'][$footerblock]['content']["#block_content"];
+  $paragraph_target_id = $block->field_content[0]->target_id;
+  $block_name = $block->info->value;
+  $block_content = get_paragraph_block_item($paragraph_target_id,$block_name);
+  $variables['block_content']  = $block_content;
+}
+
+/**
+ * Gets Media elemenet attributes
+ *  Avaliable attributes:
+ * target_id
+ * alt
+ * title
+ * width
+ * height
+ *
+ */
+function get_media_properties($mid, $properties){
+  $media_details = [];
+  $media = Media::load($mid);
+  $media_details['details']['bundle'] = $media->bundle();
+  foreach ($properties as $key => $property) {
+    if ($property == 'uri'){
+      if ($media_details['details']['bundle'] == 'remote_video') {
+        $url = str_replace("youtu.be/", "www.youtube.com/embed/", explode("?",get_media_url($mid)));
+         $media_details['details'][$property] = $url[0];
+      }
+      elseif($media_details['details']['bundle'] == 'video'){
+        $media_details['details'][$property] = get_media_url($mid);
+      }
+      elseif($media_details['details']['bundle'] == 'image'){
+        $media_details['details'][$property] = get_file_path($media->field_media_image[0]->target_id);
+      }
+    }else{
+      $media_details['details'][$property] = $media->field_media_image[0]->$property;
+    }
+  }
+  return $media_details;
+}
+
+function get_paragraph_media_gallery($target_id){
+  $paragraph = Paragraph::load($target_id);
+  $media_items =  Paragraph::load($paragraph->field_media_items->target_id);
+  $main_image_video_items = $media_items->field_main_image_video_item;
+  $meida_list = [];
+  $meida_list['label'] = $paragraph->field_label[0]->value;
+  foreach ($main_image_video_items as $media_item) {
+    $mid = $media_item->target_id;
+   $meida_list['media_list'][]= get_media_properties($mid, ['uri','alt']);
+  }
+  return $meida_list;
+}
+
+function get_media_url($mid){
+  $media = Media::load($mid);
+  $bundle = $media->bundle();
+  if ($bundle != 'remote_video' && $bundle != 'video') {
+    return get_file_path($media->field_media_image[0]->target_id);
+  }
+  elseif($bundle === 'video'){
+    return get_file_path($media->field_media_video_file[0]->target_id);
+  }
+  else{
+     return  $media->field_media_oembed_video[0]->value;
+  }
+}
+
+function get_file_path($fid){
+  $file = File::load($fid);
+  if ($file) {
+    $uri = $file->getFileUri();
+    return  \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+  }
+}
+
+function get_paragraph_media_info($target_id, $field){
+  $paragraph = Paragraph::load($target_id);
+  if (count($paragraph->$field)== 1) {
+    $media = [];
+    $mid = $paragraph->$field[0]->target_id;
+    $media =  get_media_properties($mid, ['uri','alt']);
+    $media['format'] = $paragraph->field_media_format[0]->value;
+    return $media;
+  }else{
+    $meida_list = [];
+    foreach ($paragraph->$field as $media) {
+      $mid =$media->target_id;
+      $meida_list[] = get_media_properties($mid, ['uri','alt']);
+    }
+    return $meida_list;
+  }
+
+}
+
+function get_paragraph_media_item($target_id){
+  $paragraph = Paragraph::load($target_id);
+  $media = [];
+  if ($paragraph->field_media_item) {
+    $pid = $paragraph->field_media_item[0]->target_id;
+    $paragraph_media_item = Paragraph::load($pid);
+    $media_id = $paragraph_media_item->field_main_image_video_item[0]->target_id;
+    $media_item = $media_id != null ? get_media_properties($media_id, ['uri','alt']) : null;
+  }
+  elseif($paragraph->field_main_image_video_item) {
+    $media_id = $paragraph->field_main_image_video_item[0]->target_id;
+    $media_item = $media_id != null ? get_media_properties($media_id, ['uri','alt']) : null;
+  }
+  $media = $media_item;
+  $media['format'] = $paragraph->field_media_format[0]->value;
+  return $media;
+}
+
+function get_paragraph_column_item($target_id){
+  $paragraph = Paragraph::load($target_id);
+  $column = [];
+  $column['column_order'] =  $paragraph->field_column_order[0]->value;
+    $pid = $paragraph->field_media_item[0]->target_id;
+  if ($pid != null) {
+    $column['media_item'] = get_paragraph_media_item($pid);
+  }else{
+     $column['media_item'] = NULL;
+  }
+  $column['text_field'] = $paragraph->field_text_field[0]->value;
+  return  $column;
+}
+
+function get_paragraph_tab_item($tab_element_keys, $tab_label){
+  $content = [];
+  foreach ($tab_element_keys as $tab_key => $tab_value) {
+    $tab_element_key = $tab_element_keys[$tab_key]->target_id;
+    $components = $tab_value->get('entity')->getTarget()->getValue();
+     $content['tab_label'] = $tab_label;
+    foreach ($components as $component_field_name => $component_value) {
+      if (str_starts_with($component_field_name, 'field_')) {
+        $content['tab_id'] = str_replace(" ", "_", strtolower($tab_label));
+        if ($component_field_name == 'field_color' || $component_field_name == 'field_label') {
+          $content['tab_content'][$tab_key] = $components->$component_field_name['0']->value != 'none' ? $components->$component_field_name['0']->value : null;
+        }
+        if ($component_field_name != 'field_color' && $component_field_name != 'field_label') {
+          foreach ($components->$component_field_name as $content_position => $value) {
+              $content_target_id = $components->$component_field_name[$content_position]->target_id;
+              if ($component_field_name == 'field_block_element') {
+                $entity =  $value->get('entity')->getTarget()->getValue();
+                $paragraph_target_id = $entity->field_content->target_id;
+                $block_type = get_paragraph_type($paragraph_target_id);
+                $block_name = $entity->info->value;
+                $block_content = get_paragraph_block_item($paragraph_target_id,$block_name);
+                $fields['block_content'] =  $block_content;
+              }else{
+                $paragraph_type = get_paragraph_type($content_target_id);
+                $fields[$paragraph_type][] =  get_paragraph_based_on_type($content_target_id);
+
+              }
+            }
+        $content['tab_content'] = $fields;
+        }
+      }
+    }
+  }
+  return  $content;
+}
+
+function get_paragraph_accordion_row_element($target_id){
+ $paragraph = Paragraph::load($target_id);
+  return [
+    'label' => $paragraph->field_label->value,
+    'content' => $paragraph->field_text_field->value
+  ];
+}
+
+function get_paragraph_based_on_type($key){
+  $content = [];
+  $paragraph_type = get_paragraph_type($key);
+  if ($paragraph_type == 'media_component') {
+    $content[$paragraph_type]['type'] = $paragraph_type;
+    $content[$paragraph_type] = get_paragraph_media_item($key);
+  }
+  elseif ($paragraph_type == 'column_component') {
+    $paragraph_column_component =  Paragraph::load($key);
+    $content['column_items']['column_type'] =  $paragraph_column_component->field_column_type[0]->value;
+    $content['column_items']= get_paragraph_column_item($paragraph_column_component->field_column_item[0]->target_id);
+  }
+  elseif ($paragraph_type == 'column_element') {
+    $content = get_paragraph_column_item($key);
+  }
+  elseif ($paragraph_type == 'media_element') {
+    $content[$paragraph_type]['type'] = $paragraph_type;
+    $content[$paragraph_type] = get_paragraph_media_item($key);
+  }
+  elseif ($paragraph_type == 'accordion_row_element') {
+    $content[$paragraph_type]['type'] = $paragraph_type;
+    $content[$paragraph_type] = get_paragraph_accordion_row_element($key);
+  }
+  elseif ($paragraph_type == 'logo_list_component' || $paragraph_type == 'logo_gallery') {
+    $content[$paragraph_type]['type'] = $paragraph_type;
+    $content[$paragraph_type] = get_paragraph_logo_list_item($key);
+  }
+  elseif ($paragraph_type == 'media_gallery_component') {
+    $content[$paragraph_type] = get_paragraph_media_gallery($key);
+  }
+  return $content;
+}
+
+function get_paragraph_block_item($target_id,$block_name){
+  $paragraph = Paragraph::load($target_id);
+  $content = [];
+  $paragraph_type = get_paragraph_type($target_id);
+  $content['background_color'] = $paragraph->field_color->value != 'none' ? $paragraph->field_color->value : null;
+  if ($block_name == 'Site footer') {
+    $content['copyright'] = '<p class="p-2 fs-6 mx-auto d-block text-center">© '. date("Y") . ' INDIRAP. All rights reserved.</p>';
+  }
+  $content_sections = $paragraph->field_content_section;
+  foreach ($content_sections as $key => $value) {
+    $content_key = $content_sections[$key]->target_id;
+    if ($block_name == 'Site footer') {
+    $content['section_content'][] = get_paragraph_based_on_type($content_key);
+    }else{
+    $content = get_paragraph_based_on_type($content_key);
+    }
+  }
+  return  $content;
+}
+
+function get_paragraph_type($target_id){
+  if ($target_id) {
+    $paragraph = Paragraph::load($target_id);
+    return $paragraph->bundle();
+  }
+
+}

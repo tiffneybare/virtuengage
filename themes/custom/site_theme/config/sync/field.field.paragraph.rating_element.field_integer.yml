@@ -1,0 +1,23 @@
+uuid: 35a73247-b65c-4038-8208-f278e72569a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_integer
+    - paragraphs.paragraphs_type.rating_element
+id: paragraph.rating_element.field_integer
+field_name: field_integer
+entity_type: paragraph
+bundle: rating_element
+label: 'Rating Star Value'
+description: 'Enter a star value'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: 5
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,14 @@
+uuid: d995e557-5573-4e00-9f38-e5cad63e9854
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.mikestate_com
+  module:
+    - domain_access
+id: domain_access_remove_editor_action.mikestate_com
+label: 'Remove editors from the Mike Taste domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id: mikestate_com

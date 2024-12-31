@@ -1,0 +1,24 @@
+uuid: 5fd13c00-f529-4027-bd18-f38808931e9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_overlay
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.jumbotron_component
+  module:
+    - text
+id: paragraph.jumbotron_component.field_text_overlay
+field_name: field_text_overlay
+entity_type: paragraph
+bundle: jumbotron_component
+label: 'Text overlay'
+description: 'Create text to display over media'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

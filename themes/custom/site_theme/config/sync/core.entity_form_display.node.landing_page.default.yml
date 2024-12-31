@@ -1,0 +1,85 @@
+uuid: 95bc8df4-7b7f-4a76-a07e-309a27f31735
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.field_hero_banner
+    - field.field.node.landing_page.field_section_content
+    - node.type.landing_page
+  module:
+    - paragraphs
+    - path
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_hero_banner:
+    type: paragraphs
+    weight: 2
+    region: content
+    settings:
+      title: 'Hero Banner'
+      title_plural: 'Hero Banners'
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: hero_banner_component
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_section_content:
+    type: paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Section
+      title_plural: Sections
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 4
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  promote: true
+  status: true
+  sticky: true

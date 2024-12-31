@@ -1,0 +1,26 @@
+uuid: af1c5bcd-ed65-465f-96ba-35e17810e999
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.content_page.field_section_content
+    - node.type.content_page
+  module:
+    - entity_reference_revisions
+    - user
+id: node.content_page.default
+targetEntityType: node
+bundle: content_page
+mode: default
+content:
+  field_section_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  links: true

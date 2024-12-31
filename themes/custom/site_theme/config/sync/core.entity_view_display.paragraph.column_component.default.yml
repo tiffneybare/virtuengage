@@ -1,0 +1,14 @@
+uuid: ebcf003a-5641-4fdd-a509-3782507cae69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.column_component.field_column_item
+    - paragraphs.paragraphs_type.column_component
+id: paragraph.column_component.default
+targetEntityType: paragraph
+bundle: column_component
+mode: default
+content: {  }
+hidden:
+  field_column_item: true

@@ -1,0 +1,14 @@
+<div class="container footer-header">
+  {% for content_section in block_content.section_content %}
+    {% if content_section.media_component %}
+      <div class="p-2 mx-auto d-block pt-4 footer-logo">
+        <img src="{{ content_section.media_component.uri}}" class="card-img-top" alt="{{ content_section.media_component.alt}}">
+      </div>
+  {% elseif content_section.column_items.text_field %}
+      <div class="mx-auto d-block text-center" style="width:38rem;">
+        {{content_section.column_items.text_field|raw}}
+      </div>
+    {% endif %}
+  {% endfor %}
+  {{block_content.copyright|raw}}
+</div>

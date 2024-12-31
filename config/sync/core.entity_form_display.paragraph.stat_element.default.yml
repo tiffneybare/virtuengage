@@ -1,0 +1,31 @@
+uuid: 5e05faf4-1e05-4e65-9033-603cf454497a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stat_element.field_integer
+    - field.field.paragraph.stat_element.field_label
+    - paragraphs.paragraphs_type.stat_element
+id: paragraph.stat_element.default
+targetEntityType: paragraph
+bundle: stat_element
+mode: default
+content:
+  field_integer:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: 'Enter Integer'
+    third_party_settings: {  }
+  field_label:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,29 @@
+uuid: f5dd28a4-5f5a-4dff-8ea5-1c0eb6cb7e07
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.content_block
+    - field.storage.paragraph.field_block_element
+    - paragraphs.paragraphs_type.block_component
+id: paragraph.block_component.field_block_element
+field_name: field_block_element
+entity_type: paragraph
+bundle: block_component
+label: 'Block Element'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block_content'
+  handler_settings:
+    target_bundles:
+      content_block: content_block
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

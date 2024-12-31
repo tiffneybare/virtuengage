@@ -1,0 +1,6 @@
+ve_admin.lib:
+  js:
+    src/js/ve-admin.js: {}
+  css:
+    layout:
+      src/css/ve-admin.css: {}

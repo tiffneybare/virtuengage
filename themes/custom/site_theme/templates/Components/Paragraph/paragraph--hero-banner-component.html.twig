@@ -1,0 +1,19 @@
+<div class="section pxt-4-custom">
+  <div class="hero-section-{{banner_type}}">
+    <!-- Hero -->
+    {% if media_item.details.bundle == 'image' %}
+      <div class="ps-5 bg-image container-fluid hero-{{banner_type}}" style="background: url('{{ media_item.details.uri }}'); no-repeat">
+    {% else %}
+      <div class="ps-5 bg-video container-fluid hero-{{banner_type}} embed-responsive embed-responsive-16by9">
+      <video playsinline="playsinline" autoplay muted loop id="heroVideo" class=" embed-responsive-item">
+        <source src="{{ media_item.details.uri }}" type="video/mp4">
+      </video>
+    {% endif %}
+      <div class="hero-content-wrapper ">
+        {{text_overlay|raw}}
+      </div>
+  </div>
+  <!-- Hero -->
+  </div>
+</div>
+

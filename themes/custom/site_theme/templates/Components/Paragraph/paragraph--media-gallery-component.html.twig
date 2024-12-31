@@ -1,0 +1,15 @@
+ <!-- Media Gallery -->
+  <h5 class="text-uppercase secondary-color">{{media_gallery.label}}</h5>
+  <div class="container">
+  <div class="row align-items-center g-1">
+    <!-- Media -->
+    {% for media in media_gallery.media_list%}
+      <div class="col my-3 media-gallery">
+          {% include 'paragraph--media-element.html.twig' with {'type': 'gallery_videos', 'main_media': media} %}
+        {{content}}
+      </div>
+    {% endfor %}
+    <!-- Media End -->
+  </div>
+  </div>
+<!-- Media Gallery End-->

@@ -1,0 +1,85 @@
+{#
+/**
+ * @file
+ * Theme override for a menu block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content of this block.
+ * - attributes: HTML attributes for the containing element.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: HTML attributes for the title element.
+ * - content_attributes: HTML attributes for the content element.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * Headings should be used on navigation menus that consistently appear on
+ * multiple pages. When this menu block's label is configured to not be
+ * displayed, it is automatically made invisible using the 'visually-hidden' CSS
+ * class, which still keeps it visible for screen-readers and assistive
+ * technology. Headings allow screen-reader and keyboard only users to navigate
+ * to or skip the links.
+ * See http://juicystudio.com/article/screen-readers-display-none.php and
+ * http://www.w3.org/TR/WCAG-TECHS/H42.html for more information.
+ */
+#}
+{%
+  set classes = [
+    'block',
+    'block-menu',
+    'navigation',
+    'menu--' ~ derivative_plugin_id|clean_class,
+    'navbar',
+    'black-bg',
+    'fixed-top',
+    'ps-2',
+    'pe-6',
+    'pb-3',
+    'pt-3',
+  ]
+%}
+{% set heading_id = attributes.id ~ '-menu'|clean_id %}
+<nav role="navigation" aria-labelledby="{{ heading_id }}"{{ attributes.addClass(classes)|without('role', 'aria-labelledby') }}>
+  <div class="container-fluid">
+    <div class="row w-100">
+      <div class="header-logo">
+        {% if siteLogo %}
+        <div>
+          <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo d-block ">
+            <img class="main-logo" src="{{ siteLogo }}" alt="{{ 'Home'|t }}" width="120" fetchpriority="high" />
+          </a>
+        </div>
+        {% endif %}
+      </div>
+      <div class="col-4 d-none d-sm-block">
+        <div class="nav_tagline float-end mt-2">
+          <span class="phone me-3 f-3 align-middle"><a class="text-white phone" href="tel:(312)248-3497"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="#fb0202" class="bi bi-telephone-fill me-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg>(312) 248-3497</a></span>
+          <span><button class="btn secondary-red-bg text-white py-2 px-3 ms-3 rounded-0" href="/start-a-project" target="_blank">GROW MY BRAND</button></span>
+        </div>
+      </div>
+      <div class="col">
+        <div class="gx-5 top-50 end-0 float-end">
+          <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <i class="navbar-toggler-icon"></i>
+          </button>
+        </div>
+      </div>
+
+  {# Menu. #}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+  </div>
+  </div>
+</nav>

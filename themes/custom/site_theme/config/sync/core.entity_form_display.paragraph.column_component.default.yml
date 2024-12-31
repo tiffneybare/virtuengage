@@ -1,0 +1,37 @@
+uuid: 4d8fcca2-d8d9-443e-a876-35f1c7be3e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.column_component.field_column_item
+    - paragraphs.paragraphs_type.column_component
+  module:
+    - paragraphs
+id: paragraph.column_component.default
+targetEntityType: paragraph
+bundle: column_component
+mode: default
+content:
+  field_column_item:
+    type: paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: 'Section Content'
+      title_plural: 'Column Items'
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: column_element
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

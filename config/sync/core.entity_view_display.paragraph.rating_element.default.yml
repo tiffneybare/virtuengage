@@ -1,0 +1,22 @@
+uuid: 24e87bc3-67ad-4a2c-ab3e-740b75a836a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.rating_element.field_integer
+    - paragraphs.paragraphs_type.rating_element
+id: paragraph.rating_element.default
+targetEntityType: paragraph
+bundle: rating_element
+mode: default
+content:
+  field_integer:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

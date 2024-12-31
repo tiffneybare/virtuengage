@@ -1,0 +1,10 @@
+uuid: a1abe33c-36f2-456e-8049-ee9a10662e5d
+langcode: en
+status: true
+dependencies: {  }
+id: section_content
+label: 'Section Content'
+icon_uuid: null
+icon_default: null
+description: 'This allows you to create sections of content'
+behavior_plugins: {  }
