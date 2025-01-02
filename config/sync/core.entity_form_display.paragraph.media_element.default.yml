@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.media_element.field_image_shape
     - field.field.paragraph.media_element.field_main_image_video_item
     - field.field.paragraph.media_element.field_media_format
     - paragraphs.paragraphs_type.media_element
@@ -13,9 +14,15 @@ targetEntityType: paragraph
 bundle: media_element
 mode: default
 content:
+  field_image_shape:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_main_image_video_item:
     type: media_library_widget
-    weight: 1
+    weight: 2
     region: content
     settings:
       media_types:

@@ -17,3 +17,8 @@ tr.draggable.paragraph-type--media-element td {
 .js-form-type-textarea {
   clear: both;
 }
+nav.tabs-wrapper.tabs-primary.is-collapsible {
+  z-index: 1100;
+  position: relative;
+  background-color: #000;
+}

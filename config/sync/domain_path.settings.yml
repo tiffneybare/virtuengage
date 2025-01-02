@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: rXikxR_hnXI0_XsZixbc5UoV76jq67EuOnLXSq2QPJc
+entity_types:
+  block_content: '1'
+  comment: '0'
+  media: '1'
+  menu_link_content: '1'
+  node: '1'
+  shortcut: '1'
+  taxonomy_term: '0'
+  user: '0'
+hide_path_alias_ui: true
+language_method: language_content
+alias_title: name

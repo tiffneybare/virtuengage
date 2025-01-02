@@ -4,7 +4,7 @@ sites/*/settings*.php
 sites/*/services*.yml
 #sites/*/files
 #sites/*/private
-sites/default/files/php/ 
+sites/default/files/php/
 
 # Ignore multi-site test environment.
 sites/simpletest
@@ -34,7 +34,28 @@ config/envs/local/
 *.http
 .csslintrc
 .editorconfig
+.eslintignore
+.eslintrc.json
 .gitattributes
 .htaccess
-README.md
-error_log
+.ht.router.php
+autoload.php
+index.php
+INSTALL.txt
+LICENSE.txt
+README.txt
+robots.txt
+update.php
+web.config
+/vendor
+/composer.phar
+/composer
+/robo.phar
+/robo
+/drush.phar
+/drush
+/drupal.phar
+/drupal
+sites/default/settings.php
+sites/redjuice.agency/settings.php
+sites/miketaste.com/settings.php

@@ -15,6 +15,7 @@ module:
   comment: 0
   conditional_fields: 0
   config: 0
+  config_suite: 0
   contact: 0
   contextual: 0
   datetime: 0
@@ -24,6 +25,7 @@ module:
   domain_alias: 0
   domain_config: 0
   domain_config_ui: 0
+  domain_path: 0
   domain_source: 0
   dropzonejs: 0
   dynamic_page_cache: 0

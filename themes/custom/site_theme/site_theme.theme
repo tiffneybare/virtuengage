@@ -149,6 +149,7 @@ function site_theme_preprocess_paragraph__column_component(&$variables) {
     $column_item[] = get_paragraph_column_item($columns[$key]->target_id);
   }
   $variables['column_component']['column_items']  = $column_item;
+  $variables['column_component']['column_type'] =$paragraph->field_column_type[0]->value;
 }
 
 /**

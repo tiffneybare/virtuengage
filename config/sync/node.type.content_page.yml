@@ -14,5 +14,5 @@ type: content_page
 description: 'This content type is for general content pages'
 help: null
 new_revision: true
-preview_mode: 2
-display_submitted: true
+preview_mode: 1
+display_submitted: false

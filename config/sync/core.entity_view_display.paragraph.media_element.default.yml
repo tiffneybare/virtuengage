@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.media_element.field_image_shape
     - field.field.paragraph.media_element.field_main_image_video_item
     - field.field.paragraph.media_element.field_media_format
     - paragraphs.paragraphs_type.media_element
@@ -21,4 +22,5 @@ content:
     weight: 0
     region: content
 hidden:
+  field_image_shape: true
   field_media_format: true

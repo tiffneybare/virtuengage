@@ -256,10 +256,23 @@ border: solid 2px #fb0202 !important;
 .accordion-numbered::after {
 
 }
+
+.row.threepr .col {
+  min-width: calc(100vw / 4) !important;
+}
+
 .image-only img {
   border-radius: 2rem;
   height: 31rem;
   width: 18rem;
+}
+.media_with_text_under .card {
+  border-radius: 0px;
+  background-color: transparent;
+  border: none;
+}
+.two_seventy_w{
+ width: 270px;
 }
 .tab-item video {
   height: 24.5rem;
@@ -268,6 +281,9 @@ video.large_video, img.large_image {
   width: 60%;
   margin: auto !important;
   display: block;
+}
+video.fill_section {
+  width: 100%;
 }
 .media-gallery video {
   width: 24.5rem;

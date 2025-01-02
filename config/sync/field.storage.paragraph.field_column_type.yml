@@ -13,10 +13,19 @@ settings:
   allowed_values:
     -
       value: 1_column_image_left
-      label: '1 Column with Image to the Left'
+      label: '1 Column with Media  to the Left'
     -
       value: 1_column_image_right
       label: '1 Column with Image to the Right'
+    -
+      value: packages
+      label: Packages
+    -
+      value: media_with_text_under
+      label: 'Media with text Under'
+    -
+      value: reviews
+      label: Reviews
   allowed_values_function: ''
 module: options
 locked: false

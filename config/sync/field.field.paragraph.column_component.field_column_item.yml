@@ -31,6 +31,9 @@ settings:
       accordion_row_element:
         weight: -37
         enabled: false
+      block_component:
+        weight: 25
+        enabled: false
       column_component:
         weight: -36
         enabled: false

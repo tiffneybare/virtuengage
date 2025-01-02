@@ -18,16 +18,19 @@ if (empty(getenv('DDEV_PHP_VERSION') && getenv('IS_DDEV_PROJECT') == 'true')) {
   $port = 58066;
 }
 
-$databases['default']['default'] = array(
-  'database' => "db",
-  'username' => "db",
-  'password' => "db",
+$databases['default']['default'] = array (
+  'database' => 'virtheyh_rj',
+  'username' => 'virtheyh_rj',
+  'password' => 'db',
+  'prefix' => '',
   'host' => $host,
   'driver' => $driver,
   'port' => $port,
-  'prefix' => "",
+  'isolation_level' => 'READ COMMITTED',
+  'driver' => 'mysql',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
-
 $settings['hash_salt'] = 'DUBqqicGyelZQzhGZYcsVcWRPOrhWsGdOEmMIRTaRhsiVIiDtycGDXqVoFioFZDR';
 
 // This will prevent Drupal from setting read-only permissions on sites/default.

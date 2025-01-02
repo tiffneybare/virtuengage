@@ -1,25 +1,22 @@
-uuid: 87741ef4-6121-4873-b66e-32c6907c416a
+uuid: c02ba501-be0a-479b-b2dc-fb28b07018b1
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_accordion_style
-field_name: field_accordion_style
+id: paragraph.field_image_shape
+field_name: field_image_shape
 entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
     -
-      value: numbered
-      label: Numbered
+      value: circle
+      label: Circle
     -
       value: normal
       label: Normal
-    -
-      value: faq
-      label: FAQ
   allowed_values_function: ''
 module: options
 locked: false

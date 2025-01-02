@@ -12,23 +12,23 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: image_896x583
-      label: 'Image (896×583)'
+      value: two_seventy_w
+      label: 270w
     -
-      value: image_900x450
-      label: 'Image (900x450)'
+      value: eight_ninty_six_w
+      label: 896w
+    -
+      value: nine_hundred_w
+      label: 900w
     -
       value: large_image
       label: 'Large Image'
     -
-      value: video_reel
-      label: 'Video Reel'
-    -
-      value: video
-      label: Video
-    -
       value: large_video
       label: 'Large video'
+    -
+      value: fill_section
+      label: 'Fill section'
   allowed_values_function: ''
 module: options
 locked: false

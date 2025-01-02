@@ -1,14 +1,55 @@
 <div class="container-fluid">
-  <div class="row pt-5 row-xs-2">
+    {%set count = column_component.column_items|length %}
+    {%set col_width = ''%}
+    {% if count > 3 %}
+    {%set col_width = 'threepr'%}
+    {% endif %}
+  <div class="row pt-5 row-xs-2 {{column_component.column_type}} {{col_width}}">
   <!-- Column Item -->
-    {% for column_item in column_component.column_items %}
-      {% if column_item.text_field == null  and column_item.media_item != null%}
-        {% set noText = 'image-only' %}
-      {% else %}
-        {% set noText = '' %}
+  {% for column_item in column_component.column_items %}
+    {% if column_component.column_type == '1_column_image_left' %}
+    <div class="col">
+      {% if column_item.media_item != null %}
+        {% set media_field = column_item.media_item%}
+        {% include 'paragraph--media-element.html.twig' with {'type': 'column-image','style': style,'main_media': media_field} %}
+        {{content}}
       {% endif %}
-
-      <div class="col {{noText}} {{column_item.column_order}}">
+    </div>
+    <div class="col">
+      {% if column_item.text_field != null %}
+        {{column_item.text_field|raw}}
+      {% endif %}
+    </div>
+    {% elseif column_component.column_type == '1_column_image_right'%}
+      <div class="col">
+        {% if column_item.text_field != null %}
+          {{column_item.text_field|raw}}
+        {% endif %}
+      </div>
+      <div class="col">
+        {% if column_item.media_item != null %}
+          {% set media_field = column_item.media_item%}
+          {% include 'paragraph--media-element.html.twig' with {'type': 'column-image','style': style,'main_media': media_field} %}
+          {{content}}
+        {% endif %}
+      </div>
+    {% elseif column_component.column_type == 'media_with_text_under'%}
+      <div class="col">
+        <div class="card">
+          {% if column_item.media_item != null %}
+            {% set media_field = column_item.media_item%}
+            {% include 'paragraph--media-element.html.twig' with {'type': 'column-image','style': style,'main_media': media_field} %}
+            {{content}}
+          {% endif %}
+          <div class="card-body">
+            {% if column_item.text_field != null %}
+              {{column_item.text_field|raw}}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {%else%}
+      <div class="col {{column_item.column_order}}">
         {% if column_item.text_field != null %}
             {{column_item.text_field|raw}}
         {% endif %}
@@ -19,7 +60,8 @@
           {{content}}
         {% endif %}
       </div>
-    {% endfor %}
+    {% endif %}
+  {% endfor %}
   <!-- Column Item -->
   </div>
 </div>

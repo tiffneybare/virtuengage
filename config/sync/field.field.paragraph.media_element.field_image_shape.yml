@@ -1,21 +1,23 @@
-uuid: 47e3025e-06d8-436d-947b-b20d96b0c7a8
+uuid: 1a2b8b64-c5a7-40f4-9ff0-5653632bf994
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_media_format
+    - field.storage.paragraph.field_image_shape
     - paragraphs.paragraphs_type.media_element
   module:
     - options
-id: paragraph.media_element.field_media_format
-field_name: field_media_format
+id: paragraph.media_element.field_image_shape
+field_name: field_image_shape
 entity_type: paragraph
 bundle: media_element
-label: 'Media Size'
+label: 'Image Shape'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: normal
 default_value_callback: ''
 settings: {  }
 field_type: list_string

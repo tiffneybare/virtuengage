@@ -33,6 +33,15 @@ function ve_admin_form_alter(array &$form, FormStateInterface $form_state, $form
     }
   }
 }
+/**
+ * Customize the webform.
+ *
+ * Implements hook_form_alter().
+ */
+function ve_admin_page_alter(&$page): void {
+
+
+}
 
  /**
   * Show or hide items callback.

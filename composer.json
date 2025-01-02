@@ -38,6 +38,7 @@
         "drupal/core-project-message": "10.3.10",
         "drupal/core-recommended": "10.3.10",
         "drupal/domain": "^2.0@beta",
+        "drupal/domain_path": "^1.4",
         "drupal/dropzonejs": "^2.11",
         "drupal/media_bulk_upload": "^3.0",
         "drupal/paragraphs": "^1.18",
