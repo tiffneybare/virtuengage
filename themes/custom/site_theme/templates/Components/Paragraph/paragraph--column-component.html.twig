@@ -7,7 +7,7 @@
   <div class="row pt-5 row-xs-2 {{column_component.column_type}} {{col_width}}">
   <!-- Column Item -->
   {% for column_item in column_component.column_items %}
-    {% if column_component.column_type == '1_column_image_left' %}
+    {% if column_component.column_type == 'column_w_media_on_left' %}
     <div class="col">
       {% if column_item.media_item != null %}
         {% set media_field = column_item.media_item%}
@@ -20,7 +20,7 @@
         {{column_item.text_field|raw}}
       {% endif %}
     </div>
-    {% elseif column_component.column_type == '1_column_image_right'%}
+    {% elseif column_component.column_type == 'column_w_media_on_right'%}
       <div class="col">
         {% if column_item.text_field != null %}
           {{column_item.text_field|raw}}

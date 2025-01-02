@@ -271,8 +271,9 @@ border: solid 2px #fb0202 !important;
   background-color: transparent;
   border: none;
 }
-.two_seventy_w{
- width: 270px;
+.two_seventy_w {
+    width: 270px;
+    border-radius: 0px !important;
 }
 .tab-item video {
   height: 24.5rem;
@@ -468,6 +469,9 @@ nav .btn-close{
   padding-left: 0px !important;
 }
 @media (max-width: 476px) {
+.column_w_media_on_left .col,.column_w_media_on_right .col, .media_with_text_under .col, .columns_w_text_only .col, .row.threepr .col {
+    min-width: 100% !important;
+}
   .hero-content-wrapper .pt-5-5 {
       padding-top: .5rem;
     }
