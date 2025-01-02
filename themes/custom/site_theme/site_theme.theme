@@ -133,7 +133,7 @@ function site_theme_preprocess_paragraph__media_element(&$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
   $media_element = $paragraph->field_main_image_video_item[0]->target_id;
-  $variables['main_media'] = get_media_properties($media_element, ['uri','alt']);
+  $variables['main_media'] = $media_element ? get_media_properties($media_element, ['uri','alt']) : null;
   $variables['main_media']['format'] = $paragraph->field_media_format[0]->value;
 }
 
