@@ -3,7 +3,7 @@
   <!-- Logo Gallery -->
     {% for logo in logo_gallery %}
     <div class="col p-3 gx-3 gy-3">
-      <img src="{{logo.uri}}" class="card-img-top logo-gallery" alt="{{logo.alt}}">
+      <img src="{{logo.details.uri}}" class="card-img-top logo-gallery" alt="{{logo.details.alt}}">
     </div>
       {% endfor %}
   <!-- Logo Gallery -->

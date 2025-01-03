@@ -221,7 +221,7 @@ function site_theme_preprocess_region__footer(&$variables) {
 function get_media_properties($mid, $properties){
   $media_details = [];
   $media = Media::load($mid);
-  if($media){
+
     $media_details['details']['bundle'] = $media->bundle();
   foreach ($properties as $key => $property) {
     if ($property == 'uri'){
@@ -240,7 +240,7 @@ function get_media_properties($mid, $properties){
     }
   }
   return $media_details;
-  }
+  
 }
 
 function get_paragraph_media_gallery($target_id){
