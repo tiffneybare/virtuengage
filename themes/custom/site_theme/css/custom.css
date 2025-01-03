@@ -563,7 +563,7 @@ nav .offcanvas.offcanvas-end {
 
 @media (max-width: 1535px) {
   video.large_video, img.large_image {
-      width: 97%;
+      width: 90%;
       margin: auto !important;
       display: block;
     }

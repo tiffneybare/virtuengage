@@ -134,7 +134,7 @@ function site_theme_preprocess_paragraph__media_element(&$variables) {
   $paragraph = $variables['paragraph'];
   $media_element = $paragraph->field_main_image_video_item[0]->target_id;
   $variables['main_media'] = $media_element ? get_media_properties($media_element, ['uri','alt']) : null;
-  $variables['main_media']['format'] = $paragraph->field_media_format[0]->value;
+  $variables['main_media']['format'] = $paragraph->field_media_format[0]->value  ?? null;
 }
 
 /**
@@ -146,25 +146,14 @@ function site_theme_preprocess_paragraph__column_component(&$variables) {
   $columns = $paragraph->get('field_column_item');
   $column_item = [];
   foreach ($columns as $key => $value) {
-    $column_item[] = get_paragraph_column_item($columns[$key]->target_id);
+    if ($columns[$key]->target_id ) {
+      $column_item[] = get_paragraph_column_item($columns[$key]->target_id);
+    }
   }
   $variables['column_component']['column_items']  = $column_item;
-  $variables['column_component']['column_type'] =$paragraph->field_column_type[0]->value;
+  $variables['column_component']['column_type'] = $paragraph->field_column_type[0]->value  ?? null;
 }
 
-/**
- * Implements template_preprocess_paragraph().
- */
-function site_theme_preprocess_paragraph__media_gallery_component(&$variables) {
-  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
-  $paragraph = $variables['paragraph'];
-  $columns = $paragraph->get('field_column_item');
-  $column_item = [];
-  foreach ($columns as $key => $value) {
-    $column_item[] = get_paragraph_column_item($columns[$key]->target_id);
-  }
-  $variables['column_component']['column_items']  = $column_item;
-}
 
 /**
  * Implements template_preprocess_paragraph().
@@ -177,7 +166,7 @@ function site_theme_preprocess_paragraph__accordion_component(&$variables) {
   foreach ($accordion_rows as $key => $value) {
     $accordion_items[] = get_paragraph_based_on_type($value->target_id);
   }
-  $variables['accordion_style'] = $paragraph->field_accordion_style[0]->value;
+  $variables['accordion_style'] = $paragraph->field_accordion_style[0]->value  ?? null;
   $variables['accordion_items']  = $accordion_items;
 }
 
@@ -243,7 +232,7 @@ function get_media_properties($mid, $properties){
         $media_details['details'][$property] = get_file_path($media->field_media_image[0]->target_id);
       }
     }else{
-      $media_details['details'][$property] = $media->field_media_image[0]->$property;
+      $media_details['details'][$property] = $media->field_media_image[0]->$property ?? null;
     }
   }
   return $media_details;
@@ -312,27 +301,30 @@ function get_paragraph_media_item($target_id){
     $media_id = $paragraph_media_item->field_main_image_video_item[0]->target_id;
     $media_item = $media_id != null ? get_media_properties($media_id, ['uri','alt']) : null;
   }
-  elseif($paragraph->field_main_image_video_item) {
-    $media_id = $paragraph->field_main_image_video_item[0]->target_id;
+  elseif($paragraph->field_main_image_video_item && $paragraph->field_main_image_video_item[0]->target_id) {
+    $media_id = $paragraph->field_main_image_video_item[0]->target_id  ?? null;
     $media_item = $media_id != null ? get_media_properties($media_id, ['uri','alt']) : null;
   }
   $media = $media_item;
-  $media['format'] = $paragraph->field_media_format[0]->value;
+  $media['format'] = $paragraph->field_media_format[0]->value  ?? null;
   return $media;
 }
 
 function get_paragraph_column_item($target_id){
   $paragraph = Paragraph::load($target_id);
   $column = [];
-  $column['column_order'] =  $paragraph->field_column_order[0]->value;
-    $pid = $paragraph->field_media_item[0]->target_id;
-  if ($pid != null) {
-    $column['media_item'] = get_paragraph_media_item($pid);
-  }else{
-     $column['media_item'] = NULL;
+  if ($paragraph) {
+    $column['column_order'] =  $paragraph->field_column_order[0]->value ?? null;
+    $pid = $paragraph->field_media_item[0]->target_id ?? null;
+    if ($pid != null) {
+      $column['media_item'] = get_paragraph_media_item($pid);
+    }else{
+      $column['media_item'] = NULL;
+    }
+    $column['text_field'] = $paragraph->field_text_field[0]->value ?? null;
+    return  $column;
   }
-  $column['text_field'] = $paragraph->field_text_field[0]->value;
-  return  $column;
+
 }
 
 function get_paragraph_tab_item($tab_element_keys, $tab_label){
@@ -388,8 +380,10 @@ function get_paragraph_based_on_type($key){
   }
   elseif ($paragraph_type == 'column_component') {
     $paragraph_column_component =  Paragraph::load($key);
-    $content['column_items']['column_type'] =  $paragraph_column_component->field_column_type[0]->value;
+    $content['column_items']['column_type'] =  $paragraph_column_component->field_column_type[0]->value ?? null;
+    if ($paragraph_column_component->field_column_item[0]->target_id) {
     $content['column_items']= get_paragraph_column_item($paragraph_column_component->field_column_item[0]->target_id);
+    }
   }
   elseif ($paragraph_type == 'column_element') {
     $content = get_paragraph_column_item($key);
