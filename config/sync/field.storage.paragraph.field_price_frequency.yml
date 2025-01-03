@@ -1,28 +1,25 @@
-uuid: 9329daef-2294-4453-843a-9db7742a66ec
+uuid: 31beb5b8-3d09-4719-9a60-44d219e3d233
 langcode: en
 status: true
 dependencies:
   module:
     - options
     - paragraphs
-id: paragraph.field_text_alignment
-field_name: field_text_alignment
+id: paragraph.field_price_frequency
+field_name: field_price_frequency
 entity_type: paragraph
 type: list_string
 settings:
   allowed_values:
     -
-      value: text-left
-      label: Left
+      value: wk
+      label: Week
     -
-      value: text-right
-      label: Right
+      value: mo
+      label: Month
     -
-      value: center
-      label: 'Center old'
-    -
-      value: text-center
-      label: Center
+      value: yr
+      label: Year
   allowed_values_function: ''
 module: options
 locked: false

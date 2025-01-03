@@ -1,0 +1,10 @@
+uuid: 521190ec-91b4-4d27-92a2-67372bb4e77d
+langcode: en
+status: true
+dependencies: {  }
+id: price_component
+label: 'Price Component'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,19 @@
+uuid: 32abb6a0-5dfe-4477-bdcf-b3ced216e32c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_label
+    - paragraphs.paragraphs_type.price_element
+id: paragraph.price_element.field_label
+field_name: field_label
+entity_type: paragraph
+bundle: price_element
+label: Category
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

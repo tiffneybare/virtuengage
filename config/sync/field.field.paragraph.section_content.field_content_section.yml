@@ -13,6 +13,7 @@ dependencies:
     - paragraphs.paragraphs_type.logo_list_component
     - paragraphs.paragraphs_type.media_component
     - paragraphs.paragraphs_type.media_gallery_component
+    - paragraphs.paragraphs_type.pricing_table
     - paragraphs.paragraphs_type.section_content
     - paragraphs.paragraphs_type.stats_component
     - paragraphs.paragraphs_type.tab_component
@@ -43,6 +44,7 @@ settings:
       media_gallery_component: media_gallery_component
       hero_banner_component: hero_banner_component
       block_component: block_component
+      pricing_table: pricing_table
     negate: 0
     target_bundles_drag_drop:
       accordion_component:
@@ -54,6 +56,9 @@ settings:
       block_component:
         weight: 25
         enabled: true
+      button_component:
+        weight: 30
+        enabled: false
       column_component:
         weight: -42
         enabled: true
@@ -90,11 +95,20 @@ settings:
       media_gallery_component:
         weight: -35
         enabled: true
+      price_component:
+        weight: 43
+        enabled: false
+      pricing_table:
+        weight: 44
+        enabled: true
       rating_element:
         weight: -28
         enabled: false
       section_content:
         weight: -27
+        enabled: false
+      services_component:
+        weight: 47
         enabled: false
       stat_element:
         weight: -26

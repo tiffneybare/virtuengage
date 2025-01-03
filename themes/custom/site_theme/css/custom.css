@@ -227,10 +227,29 @@ border: solid 2px #fb0202 !important;
   border: solid 2px #fb0202;
   color:#fb0202;
 }
-.secondary-color-wire-btn, .tab-button.active{
+.secondary-color-wire-btn,.secondary-wire-btn, .tab-button.active{
   border: solid 2px #fb0202;
   color:#fb0202;
 }
+.secondary-btn {
+  background: #fb0202;
+  color: #FFF;
+}
+.dark-grey-btn {
+  background: #2c2c2c;
+  color:#FFF;
+}
+.dark-grey-wire-btn {
+  border: solid 2px #2c2c2c;
+}
+.black-btn {
+  background: #000;
+  color: #FFF;
+}
+.black-wire-btn {
+  border: solid 2px #000;
+}
+
 .secondary-color-wire-btn:hover{
   background-color:#fb0202;
 }

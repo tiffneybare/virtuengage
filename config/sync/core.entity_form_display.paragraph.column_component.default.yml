@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.column_component.field_column_item
     - field.field.paragraph.column_component.field_column_type
+    - field.field.paragraph.column_component.field_heading
     - paragraphs.paragraphs_type.column_component
   module:
     - paragraphs
@@ -15,7 +16,7 @@ mode: default
 content:
   field_column_item:
     type: paragraphs
-    weight: 1
+    weight: 2
     region: content
     settings:
       title: 'Section Content'
@@ -35,9 +36,29 @@ content:
     third_party_settings: {  }
   field_column_type:
     type: options_select
-    weight: 0
+    weight: 1
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_heading:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: Heading
+      title_plural: Headings
+      edit_mode: closed
+      closed_mode: preview
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: heading_component
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        convert: '0'
+        duplicate: '0'
     third_party_settings: {  }
 hidden:
   created: true

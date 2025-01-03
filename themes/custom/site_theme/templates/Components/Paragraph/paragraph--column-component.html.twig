@@ -4,6 +4,10 @@
     {% if count > 3 %}
     {%set col_width = 'threepr'%}
     {% endif %}
+     {% if column_component.heading %}
+      {% include 'paragraph--heading-component.html.twig' with {'heading': column_component.heading} %}
+      {{content}}
+    {% endif %}
   <div class="row pt-5 row-xs-2 {{column_component.column_type}} {{col_width}}">
   <!-- Column Item -->
   {% for column_item in column_component.column_items %}

@@ -1,0 +1,10 @@
+uuid: 52ab8a2e-89c8-410f-95fc-7b0a4d487869
+langcode: en
+status: true
+dependencies: {  }
+id: services_component
+label: 'Services Component'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

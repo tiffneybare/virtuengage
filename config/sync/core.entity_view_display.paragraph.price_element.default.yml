@@ -1,0 +1,73 @@
+uuid: 162e4f3a-0da3-4dee-9f8c-6cc87d1e2f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.price_element.field_amount
+    - field.field.paragraph.price_element.field_button
+    - field.field.paragraph.price_element.field_label
+    - field.field.paragraph.price_element.field_most_popular
+    - field.field.paragraph.price_element.field_services
+    - field.field.paragraph.price_element.field_short_description
+    - paragraphs.paragraphs_type.price_element
+  module:
+    - entity_reference_revisions
+id: paragraph.price_element.default
+targetEntityType: paragraph
+bundle: price_element
+mode: default
+content:
+  field_amount:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_button:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_label:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_most_popular:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_services:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_short_description:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

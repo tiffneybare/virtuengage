@@ -15,8 +15,14 @@ settings:
       value: 1_column_image_left
       label: '1 Column with Media  to the Left'
     -
-      value: 1_column_image_right
-      label: '1 Column with Image to the Right'
+      value: columns_w_text_only
+      label: 'Columns with text only'
+    -
+      value: column_w_media_on_left
+      label: 'Column with Media  to the Left'
+    -
+      value: column_w_media_on_right
+      label: 'Column with Image to the Right'
     -
       value: packages
       label: Packages
@@ -26,6 +32,9 @@ settings:
     -
       value: reviews
       label: Reviews
+    -
+      value: media_above_text
+      label: 'Media above text'
   allowed_values_function: ''
 module: options
 locked: false

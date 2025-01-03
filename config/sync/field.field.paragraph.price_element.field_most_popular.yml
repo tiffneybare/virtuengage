@@ -1,0 +1,21 @@
+uuid: 6a65f670-d731-4b09-a8ef-20a4c3c7adee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_most_popular
+    - paragraphs.paragraphs_type.price_element
+id: paragraph.price_element.field_most_popular
+field_name: field_most_popular
+entity_type: paragraph
+bundle: price_element
+label: 'Most Popular'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'True'
+  off_label: 'False'
+field_type: boolean

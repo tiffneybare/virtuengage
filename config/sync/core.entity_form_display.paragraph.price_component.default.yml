@@ -1,0 +1,29 @@
+uuid: cf8d3cae-498a-4a49-986f-e5edd3548f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.price_component.field_price
+    - field.field.paragraph.price_component.field_price_frequency
+    - paragraphs.paragraphs_type.price_component
+id: paragraph.price_component.default
+targetEntityType: paragraph
+bundle: price_component
+mode: default
+content:
+  field_price:
+    type: number
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_price_frequency:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

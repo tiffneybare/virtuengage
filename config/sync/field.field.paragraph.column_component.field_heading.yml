@@ -1,0 +1,94 @@
+uuid: b68c5afe-e5ef-4e55-a6e9-5b47771bdac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading
+    - paragraphs.paragraphs_type.column_component
+    - paragraphs.paragraphs_type.heading_component
+  module:
+    - entity_reference_revisions
+id: paragraph.column_component.field_heading
+field_name: field_heading
+entity_type: paragraph
+bundle: column_component
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      heading_component: heading_component
+    negate: 0
+    target_bundles_drag_drop:
+      accordion_component:
+        weight: 20
+        enabled: false
+      accordion_row_element:
+        weight: 21
+        enabled: false
+      block_component:
+        weight: 25
+        enabled: false
+      column_component:
+        weight: 26
+        enabled: false
+      column_element:
+        weight: 22
+        enabled: false
+      heading_component:
+        weight: 24
+        enabled: true
+      hero_banner_component:
+        weight: 25
+        enabled: false
+      integer_element:
+        weight: 26
+        enabled: false
+      jumbotron_component:
+        weight: 31
+        enabled: false
+      logo_element:
+        weight: 27
+        enabled: false
+      logo_gallery:
+        weight: 33
+        enabled: false
+      logo_list_component:
+        weight: 28
+        enabled: false
+      media_component:
+        weight: 35
+        enabled: false
+      media_element:
+        weight: 30
+        enabled: false
+      media_gallery_component:
+        weight: 31
+        enabled: false
+      rating_element:
+        weight: 33
+        enabled: false
+      section_content:
+        weight: 39
+        enabled: false
+      stat_element:
+        weight: 41
+        enabled: false
+      stats_component:
+        weight: 35
+        enabled: false
+      tab_component:
+        weight: 36
+        enabled: false
+      tab_element:
+        weight: 37
+        enabled: false
+      title_element:
+        weight: 38
+        enabled: false
+field_type: entity_reference_revisions

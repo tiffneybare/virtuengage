@@ -1,0 +1,21 @@
+uuid: fc32025a-c65e-4bab-bacc-dfc5523f8680
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_price_frequency
+    - paragraphs.paragraphs_type.price_component
+  module:
+    - options
+id: paragraph.price_component.field_price_frequency
+field_name: field_price_frequency
+entity_type: paragraph
+bundle: price_component
+label: 'Price Frequency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

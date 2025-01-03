@@ -1,0 +1,33 @@
+uuid: f4379be6-c914-4434-bb0c-6d850c9101b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pricing_table.field_color
+    - field.field.paragraph.pricing_table.field_prices
+    - paragraphs.paragraphs_type.pricing_table
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.pricing_table.default
+targetEntityType: paragraph
+bundle: pricing_table
+mode: default
+content:
+  field_color:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_prices:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

@@ -1,0 +1,39 @@
+uuid: 73c3eeef-48c8-434b-8d56-f30be815d892
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_button_style
+field_name: field_button_style
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: secondary-btn
+      label: 'Standard Solid Button'
+    -
+      value: secondary-wire-btn
+      label: 'Standard Wire Button'
+    -
+      value: dark-grey-btn
+      label: 'Dark Grey Solid Button'
+    -
+      value: dark-grey-wire-btn
+      label: 'Dark Grey Wire Button'
+    -
+      value: black-btn
+      label: 'Black Solid Button'
+    -
+      value: black-wire-btn
+      label: 'Black Wire Button'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -29,6 +29,9 @@ settings:
     -
       value: crimson-red-bg
       label: 'Crimson Red'
+    -
+      value: secondary-color
+      label: 'Official Red'
   allowed_values_function: ''
 module: options
 locked: false

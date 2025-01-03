@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.column_component.field_column_item
     - field.field.paragraph.column_component.field_column_type
+    - field.field.paragraph.column_component.field_heading
     - paragraphs.paragraphs_type.column_component
 id: paragraph.column_component.default
 targetEntityType: paragraph
@@ -14,3 +15,4 @@ content: {  }
 hidden:
   field_column_item: true
   field_column_type: true
+  field_heading: true

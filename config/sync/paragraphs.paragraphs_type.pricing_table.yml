@@ -1,0 +1,10 @@
+uuid: 172dd540-d965-47d7-924c-9fb5c917c597
+langcode: en
+status: true
+dependencies: {  }
+id: pricing_table
+label: 'Pricing Table'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

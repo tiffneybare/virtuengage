@@ -1,0 +1,21 @@
+uuid: cad53f0a-1e25-41ba-8136-afb530eb9d96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_component.field_service
+    - paragraphs.paragraphs_type.services_component
+id: paragraph.services_component.default
+targetEntityType: paragraph
+bundle: services_component
+mode: default
+content:
+  field_service:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

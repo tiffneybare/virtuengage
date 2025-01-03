@@ -1,0 +1,23 @@
+uuid: c53db023-c83e-47c8-90ea-8282b20f6ea4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.services_component.field_service
+    - paragraphs.paragraphs_type.services_component
+id: paragraph.services_component.default
+targetEntityType: paragraph
+bundle: services_component
+mode: default
+content:
+  field_service:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
