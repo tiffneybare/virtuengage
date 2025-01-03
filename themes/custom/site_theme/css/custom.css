@@ -404,10 +404,11 @@ button.accordion-button:hover {
     width: 249px;
 }
 
-.logo-gallery{
-/*  width: 9rem;
-  max-height: 85px*/
+.logo-gallery {
+    width: 10rem;
+    max-height: 106px;
 }
+
 .logo-list{
   width: 10rem;
 }
@@ -494,6 +495,9 @@ nav .btn-close{
   padding-left: 0px !important;
 }
 @media (max-width: 476px) {
+    .two_forty_nine_w {
+    max-width: 95% !important;
+}
   .social-media-w-packages .col {
     min-width: 95% !important;
   }
