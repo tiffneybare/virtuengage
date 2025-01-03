@@ -124,6 +124,7 @@ function site_theme_preprocess_paragraph__section_content(&$variables) {
   /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
   $paragraph = $variables['paragraph'];
   $variables['section_color']  = $paragraph->get('field_color')[0]->value != 'none' ? $paragraph->get('field_color')[0]->value : null;
+  $variables['section_class'] = $paragraph->field_class[0]->value ?? null;
 }
 
 /**
@@ -240,7 +241,7 @@ function get_media_properties($mid, $properties){
     }
   }
   return $media_details;
-  
+
 }
 
 function get_paragraph_media_gallery($target_id){

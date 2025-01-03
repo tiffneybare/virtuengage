@@ -57,6 +57,6 @@ web.config
 /drupal.phar
 /drupal
 sites/default/settings.php
-sites/redjuice.agency/settings.php
-sites/miketaste.com/settings.php
+sites/*/settings.php
+sites/*/files/php
 /exports
