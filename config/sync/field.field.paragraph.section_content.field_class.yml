@@ -1,0 +1,19 @@
+uuid: a3878ef1-32f8-47bc-b094-3a87e240afc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_class
+    - paragraphs.paragraphs_type.section_content
+id: paragraph.section_content.field_class
+field_name: field_class
+entity_type: paragraph
+bundle: section_content
+label: Class
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

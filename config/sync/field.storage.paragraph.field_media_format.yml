@@ -12,6 +12,9 @@ type: list_string
 settings:
   allowed_values:
     -
+      value: two_forty_nine_w
+      label: 249W
+    -
       value: two_seventy_w
       label: 270w
     -

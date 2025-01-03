@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.section_content.field_class
     - field.field.paragraph.section_content.field_color
     - field.field.paragraph.section_content.field_content_section
     - field.field.paragraph.section_content.field_section_title
@@ -24,5 +25,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_class: true
   field_color: true
   field_section_title: true

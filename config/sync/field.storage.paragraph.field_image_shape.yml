@@ -17,6 +17,9 @@ settings:
     -
       value: normal
       label: Normal
+    -
+      value: rounded_corners
+      label: 'Rounded Corners'
   allowed_values_function: ''
 module: options
 locked: false

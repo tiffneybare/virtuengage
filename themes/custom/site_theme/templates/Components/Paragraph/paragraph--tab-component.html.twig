@@ -9,7 +9,7 @@
       {% endif %}
       {% if tab_details..tab_label %}
         <li class="nav-item my-4 " role="presentation">
-          <button class="nav-link {{first}} rounded-0 tab-button" id="{{tab_details.tab_id}}" data-bs-toggle="tab" data-bs-target="#{{tab_details.tab_id}}-pane" type="button" role="tab" aria-controls="{{tab_details.tab_id}}-pane" aria-selected="true">{{tab_details.tab_label}}</button>
+          <button class="nav-link {{first}} rounded-0 tab-button text-uppercase" id="{{tab_details.tab_id}}" data-bs-toggle="tab" data-bs-target="#{{tab_details.tab_id}}-pane" type="button" role="tab" aria-controls="{{tab_details.tab_id}}-pane" aria-selected="true">{{tab_details.tab_label}}</button>
         </li>
       {% endif %}
     {% endfor %}
