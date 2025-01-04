@@ -494,6 +494,9 @@ nav .btn-close{
 .ps-5.hero-half {
   padding-left: 0px !important;
 }
+.social-media-w-packages h2.heading {
+  font-family: Bebasneuepro, sans-serif;
+}
 @media (max-width: 476px) {
     .two_forty_nine_w {
     max-width: 95% !important;

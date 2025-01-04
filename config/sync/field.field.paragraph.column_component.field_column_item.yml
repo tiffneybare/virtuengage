@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_column_item
     - paragraphs.paragraphs_type.column_component
     - paragraphs.paragraphs_type.column_element
+    - paragraphs.paragraphs_type.pricing_table
   module:
     - entity_reference_revisions
 id: paragraph.column_component.field_column_item
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     target_bundles:
       column_element: column_element
+      pricing_table: pricing_table
     negate: 0
     target_bundles_drag_drop:
       accordion_component:
@@ -33,6 +35,9 @@ settings:
         enabled: false
       block_component:
         weight: 25
+        enabled: false
+      button_component:
+        weight: 31
         enabled: false
       column_component:
         weight: -36
@@ -70,11 +75,23 @@ settings:
       media_gallery_component:
         weight: -35
         enabled: false
+      price_component:
+        weight: 44
+        enabled: false
+      price_element:
+        weight: 45
+        enabled: false
+      pricing_table:
+        weight: 46
+        enabled: true
       rating_element:
         weight: -27
         enabled: false
       section_content:
         weight: -24
+        enabled: false
+      services_component:
+        weight: 49
         enabled: false
       stat_element:
         weight: -26
